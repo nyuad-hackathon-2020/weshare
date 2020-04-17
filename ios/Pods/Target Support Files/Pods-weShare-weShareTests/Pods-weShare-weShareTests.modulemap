@@ -1,0 +1,6 @@
+module Pods_weShare_weShareTests {
+  umbrella header "Pods-weShare-weShareTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
