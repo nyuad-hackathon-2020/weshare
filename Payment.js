@@ -63,7 +63,7 @@ export default class Payment extends Component{
             </View>  
               <View style={{flexDirection: 'row' ,alignItems: 'center', position: 'absolute', bottom: 30}}>
                 <View>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
                           <Image
                               source={require('./images/back.png')}
                               style={{ width: 25, height: 25, marginLeft: 25, marginTop: 5 }}
@@ -72,12 +72,15 @@ export default class Payment extends Component{
                 </View>
                 <View style={{marginLeft: 40,}}>
                         <View style={styles.roundbtn}>
-                                <TouchableOpacity onPress={() => {}} style={{flexDirection: 'row'}}>
+                                <TouchableOpacity onPress={() => {
+                                  alert('Thank you for making payment')
+                                  this.props.navigation.replace('rfeed')
+                                }} style={{flexDirection: 'row'}}>
                                     <Image
                                         source={require('./images/success.png')}
                                         style={{ width: 25, height: 25 }}
                                     />
-                                    <Text style={styles.confirm}>  Confirm</Text>
+                                    <Text style={styles.confirm}>Confirm</Text>
                                 </TouchableOpacity>
                         </View>                              
                 </View>

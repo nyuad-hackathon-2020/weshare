@@ -133,15 +133,30 @@ class ShoppingCart extends Component{
                             </ScrollView>
                         </View>
 
-                        <View>
-                            <View style={{ flexDirection: 'row' , flex: 0.1, backgroundColor: 'green'}}>
+                        <View style={{flex: 0.1,}}>
+                            <View style={{ flexDirection: 'row' , alignItems: 'center'}}>
                                 <View>
                                    <TouchableOpacity onPress={() => this.props.navigation.replace('rfeed')}>
                                         <Image
                                             source={require('./images/back.png')}
-                                            style={{ width: 20, height: 20, marginTop: 20 }}
+                                            style={{ width: 20, height: 20, marginTop: 10 }}
                                         />
                                    </TouchableOpacity>
+                                </View>
+
+                                <View>
+                                    <View style={{width: 240, height: 50, backgroundColor: '#7874D5', borderRadius: 20, marginLeft: 55, alignItems: 'center', justifyContent: 'center'}}>
+                                            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                                                
+                                                    <Image
+                                                        source={require('./images/success.png')}
+                                                        style={{ width: 22, height: 22 }}
+                                                      />
+                                                     <TouchableOpacity onPress={() => this.props.navigation.navigate('payment')}>
+                                                      <Text style={{fontWeight: '500', fontSize: 14, color: '#FFFFFF', marginLeft: 10}}>Confirm</Text>
+                                                    </TouchableOpacity>
+                                            </View>
+                                    </View>
                                 </View>
 
                                 

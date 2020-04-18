@@ -30,7 +30,7 @@ export default function App(){
               {/* <Stack.Screen name="Login" component={Login} />
               // <Stack.Screen name="SignIn" component={SignIn} /> */}
 
-              {/* <Stack.Screen name="profile" component={Payment} /> */}
+              {/* <Stack.Screen name="profile" component={profile2} /> */}
 
               <Stack.Screen name="signin" component={SignIn} />
               <Stack.Screen name="login" component={Login} />
@@ -41,6 +41,7 @@ export default function App(){
               <Stack.Screen name="request" component={Request} />
               <Stack.Screen name="rfeed" component={RequestFeed} />
               <Stack.Screen name="cart" component={ShoppingCart} />
+              <Stack.Screen name="payment" component={Payment} />
             </Stack.Navigator>
           </NavigationContainer>
     )
