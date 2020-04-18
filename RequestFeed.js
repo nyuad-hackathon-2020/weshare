@@ -6,7 +6,8 @@ import {
   TouchableOpacity,
   Dimensions,
   ScrollView,
-  Image
+  Image,
+  TextInput
 }from 'react-native'
 import AsyncStorage from '@react-native-community/async-storage';
 
@@ -59,12 +60,97 @@ export default class RequestFeed extends Component{
     });
   }
 
-  // showImage(name){
-  //   switch(name){
-  //     case 'clothes':
+  showImage(name){
+    switch(name){
+      case 'Clothes':
+        return(
+          <Image
+            source={require('./images/clothes.jpg')}
+            style={{ width: 64, height: 64, marginLeft: 40 }}
+          />
+        )
+       
 
-  //   }
-  // }
+        case 'Food':
+        return(
+          <Image
+            source={require('./images/food.jpg')}
+            style={{ width: 64, height: 64, marginLeft: 40 }}
+          />
+        )
+
+        case 'Electronics':
+        return(
+          <Image
+            source={require('./images/electron.jpg')}
+            style={{ width: 64, height: 64, marginLeft: 40 }}
+          />
+        )
+
+        case 'Groceries':
+        return(
+          <Image
+            source={require('./images/grocery.jpg')}
+            style={{ width: 64, height: 64, marginLeft: 40 }}
+          />
+        )
+
+        case 'Baby':
+        return(
+          <Image
+            source={require('./images/baby.jpg')}
+            style={{ width: 64, height: 64, marginLeft: 40 }}
+          />
+        )
+
+        case 'Offer':
+        return(
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('retailer')}>
+            <Image
+              source={require('./images/offerr.png')}
+              style={{ width: 64, height: 64, marginLeft: 40 }}
+            />
+          </TouchableOpacity>
+        )
+      
+    }
+  }
+
+  showAvatar(name){
+    switch(name){
+      case 'Harshit':
+        return(
+          <Image
+            source={require('./images/avH.png')}
+            style={{ width: 40, height: 40 }}
+          />
+        )
+
+        case 'Elif':
+          return(
+            <Image
+              source={require('./images/avatarE.png')}
+              style={{ width: 40, height: 40 }}
+            />
+          )
+
+        case 'John':
+        return(
+          <Image
+            source={require('./images/avatarJ.png')}
+            style={{ width: 40, height: 40 }}
+          />
+        )
+
+        case 'Nico':
+        return(
+          <Image
+            source={require('./images/avH.png')}
+            style={{ width: 40, height: 40 }}
+          />
+        )
+    }
+  }
 
    showData =() =>{
     return this.state.requestData.map((item, index) =>{
@@ -75,14 +161,15 @@ export default class RequestFeed extends Component{
                    <View style={{height: 20, width: phonewidth, marginBottom: 30,  height: 200}}>
                          <View style={{flexDirection: 'row', alignItems: 'center'}}>
                                 <View>
-                                    <Image
+                                    {/* <Image
                                       source={require('./images/circle2.png')}
                                       style={{ width: 40, height: 40}}
                                     />
                                     <Image
                                       source={require('./images/man.png')}
                                       style={{ width: 16, height: 16, position: 'absolute', marginLeft: 12, marginTop: 10}}
-                                    />
+                                    /> */}
+                                    {this.showAvatar(item.get('Name'))}
                                 </View>
 
                                 <View style={{marginLeft: 10}}>
@@ -93,7 +180,7 @@ export default class RequestFeed extends Component{
                                 <View>
                                     <Image
                                       source={require('./images/threedot.png')}
-                                      style={{ width: 3, height: 15, marginLeft: 270}}
+                                      style={{ width: 3, height: 15, marginLeft: 260}}
                                     />
                                 </View>
                          </View>
@@ -101,7 +188,7 @@ export default class RequestFeed extends Component{
                          <View style={{marginTop: 30, flexDirection: 'row'}}>
                                 <View>
                                  
-                                    {item.get('Category') == 'Offer' ? <TouchableOpacity onPress={() => this.props.navigation.navigate('retailer')}>
+                                    {/* {item.get('Category') == 'Offer' ? <TouchableOpacity onPress={() => this.props.navigation.navigate('retailer')}>
                                       <Image
                                         source={require('./images/purplerect.png')}
                                         style={{ width: 64, height: 64, marginLeft: 40}}
@@ -109,17 +196,19 @@ export default class RequestFeed extends Component{
                                     </TouchableOpacity> : <Image
                                     source={require('./images/purplerect.png')}
                                     style={{ width: 64, height: 64, marginLeft: 40}}
-                                  />}
+                                  />} */}
+
+                                  {this.showImage(item.get('Category'))}
                                  
                                 </View>
 
                                 <View>
                                     <Text style={{marginLeft: 17, fontSize: 14, fontWeight: '500', color: '#562DC4'}}>{item.get('Message')}</Text>
-                                    <Text style={{marginLeft: 17, fontSize: 12, fontWeight: '500', color: 'gray', marginTop: 10}}>{item.get('Information')}</Text>
+                                    <Text style={{marginLeft: 17, fontSize: 12, fontWeight: '500', color: 'gray', marginTop: 10, height: 50}}>{item.get('Information')}</Text>
                                 </View>
                          </View>
 
-                         <View style={{flexDirection: 'row', marginTop: 50}}>
+                         <View style={{flexDirection: 'row', marginTop: 40}}>
                                 <View style={{flexDirection: 'row', alignItems: 'center'}}>
                                     <View>
                                       <Image
@@ -129,8 +218,8 @@ export default class RequestFeed extends Component{
                                     </View>
 
                                    {item.get('Category') == 'Offer' ?
-                                    <Text style={{fontSize: 14, color: '#B5CDFE', marginLeft: 11}}>Accept Donations</Text>:
-                                    <Text style={{fontSize: 14, color: '#B5CDFE', marginLeft: 11}}>Support Cause</Text>}
+                                    <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11}}>Accept Donations</Text>:
+                                    <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11}}>Support Cause</Text>}
                                 </View>
 
                                 <View style={{flexDirection: 'row', alignItems: 'center', marginLeft: 20}}>
@@ -145,10 +234,12 @@ export default class RequestFeed extends Component{
                                       this.addtoCart(item)
                                       alert('Added to Cart Successfully')
                                     }}>
-                                        <Text style={{fontSize: 14, color: '#B5CDFE', marginLeft: 11, marginTop: 4}}>Add to Cart</Text>
+                                        <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11, marginTop: 4}}>Add to Cart</Text>
                                     </TouchableOpacity>
                                 </View>
                          </View>
+                         <TextInput 
+                         style={{height: 1, width: 370, borderColor: 'black', borderBottomWidth: 0.5, marginTop: 10}}/>
                    </View>
             </View>
         )
@@ -224,7 +315,7 @@ export default class RequestFeed extends Component{
                   <View style={{position: 'absolute', marginLeft: 12, marginTop: 820, marginLeft: 350 }}>
                     <TouchableOpacity onPress={() =>this.props.navigation.navigate('feed2')}>
                       <Image
-                        source={require('./images/add.png')}
+                        source={require('./images/fb2.png')}
                         style={{ width: 51, height: 51}}
                       />
                     </TouchableOpacity>

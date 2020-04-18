@@ -27,7 +27,8 @@ export default class Request extends Component{
             message: this.state.req,
             category: this.state.hashtag,
             username: 'HarshitG24',
-            price: 40
+            price: 40,
+            info: this.state.info
         }
 
         const resp = await Parse.Cloud.run('AddRequest', params)
