@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
     borderColor: '#ffffff',
     borderStyle: 'solid',
     borderWidth: 1,
-    backgroundColor: '#5887f9'
+    backgroundColor: '#7874D5'
   },
 
   confirmWord: {

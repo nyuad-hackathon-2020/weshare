@@ -18,14 +18,19 @@ export default class Feed2 extends Component{
                         style={{width: 40, height: 40}}
                       />
                       <Image
-                        source={require('./images/man.png')}
-                        style={{ width: 16, height: 16, position: 'absolute', marginLeft: 12, marginTop: 10 }}
+                        source={require('./images/avatar2.png')}
+                        style={{ resizeMode: "cover",
+                        height: 45,
+                        width: 45,
+                        borderWidth: 0,
+                        borderRadius: 75,
+                        position: 'absolute', top: -4, left: -4}}
                       />
                     </View> 
 
                      <View>
                       <Image
-                        source={require('./images/cart.png')}
+                        source={require('./images/basket.png')}
                         style={{ width: 26, height: 29, marginLeft: 27}}
                       />
                     </View> 

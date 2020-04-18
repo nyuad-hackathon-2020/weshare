@@ -237,7 +237,7 @@ export default class RequestFeed extends Component{
                                 <View style={{flexDirection: 'row', alignItems: 'center', marginLeft: 20}}>
                                     <View>
                                       <Image
-                                        source={require('./images/charity.png')}
+                                        source={require('./images/basket_heart.png')}
                                         style={{ width: 18, height: 18, marginLeft: 40}}
                                       />
                                     </View>
@@ -272,8 +272,13 @@ export default class RequestFeed extends Component{
                         style={{width: 40, height: 40}}
                       />
                       <Image
-                        source={require('./images/man.png')}
-                        style={{ width: 16, height: 16, position: 'absolute', marginLeft: 12, marginTop: 10 }}
+                        source={require('./images/avatar2.png')}
+                        style={{ resizeMode: "cover",
+                        height: 45,
+                        width: 45,
+                        borderWidth: 0,
+                        borderRadius: 75,
+                        position: 'absolute', top: -4, left: -4}}
                       />
                     </View> 
                    
@@ -282,7 +287,7 @@ export default class RequestFeed extends Component{
                         cart: this.state.myCart
                       })}>
                           <Image
-                            source={require('./images/package.png')}
+                            source={require('./images/basket.png')}
                             style={{ width: 24, height: 24, marginLeft: 27}}
                           />
                       </TouchableOpacity>
