@@ -10,7 +10,14 @@ class SignIn extends Component{
   render(){
   return( 
       <View style={{flex: 1}}>
-       
+       <Image source={require('../images/weShareW.png')}
+           style={{
+               height: 110,
+               width: 170,
+               position: 'absolute',
+               left: 120,
+               top: 180,
+           }}/>
        <Image source={require('../images/weShareLogo.png')}
             style={{  
             left:     90,
