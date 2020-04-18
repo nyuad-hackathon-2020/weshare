@@ -13,7 +13,8 @@ import SignIn from './Login/SignIn'
 import Feed2 from './Feed2'
 import Request from './Request'
 import Donation from './Donation'
-import Confirmation from './Confirmation'
+import ConfirmDonation from './ConfirmDonation'
+import ConfirmRequest from './ConfirmRequest'
 import retailerProfile from './retailerProfile'
 import ShoppingCart from './ShoppingCart'
 import profile3 from './profile3'
@@ -36,7 +37,8 @@ export default function App(){
               <Stack.Screen name="login" component={Login} />
               <Stack.Screen name="feed2" component={Feed2} />
               <Stack.Screen name="retailer" component={retailerProfile} />
-              <Stack.Screen name="confirmation" component={Confirmation} />
+              <Stack.Screen name="confirmdon" component={ConfirmDonation} />
+              <Stack.Screen name="confirmreq" component={ConfirmRequest} />
               <Stack.Screen name="donation" component={Donation} />
               <Stack.Screen name="request" component={Request} />
               <Stack.Screen name="rfeed" component={RequestFeed} />

@@ -2,7 +2,8 @@ import React, {Component} from 'react'
 import {
     View,
     Image,
-    Text
+    Text,
+    StyleSheet
 }from 'react-native'
 
 export default class Confirmation extends Component{
@@ -40,16 +41,26 @@ export default class Confirmation extends Component{
                     </View>
                  </View>
 
-                 <View style={{flex: 1, justifyContent: 'center', alignItems:'center'}}>
+                 <View style={{flex: 1, justifyContent: 'center', alignItems:'center', marginBottom: 150}}>
                         <View>
                             <Image
-                                source={require('./images/search.png')}
-                                style={{ width: 20, height: 20}}
+                                source={require('./images/Little_alien.png')}
+                                style={{ width: 150, height: 150}}
                             />
                         </View>
-                        <Text>Confirmed</Text>
+                        <Text style={styles.txt}>Request Confirmed</Text>
                  </View>
             </View>
         )
     }
 }
+
+
+const styles= StyleSheet.create({
+    txt:{
+        fontWeight: 'bold',
+        color: '#5887F9',
+        fontSize: 20,
+        marginTop: 10
+    }
+}) 
