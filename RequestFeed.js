@@ -27,7 +27,15 @@ export default class RequestFeed extends Component{
 }
 
   state={
-      requestData: []
+      requestData: [],
+      myCart: []
+  }
+
+  addtoCart(item){
+
+    this.setState({
+      myCart: [item, ...this.state.myCart]
+    })
   }
 
   async componentDidMount(){
@@ -116,7 +124,10 @@ export default class RequestFeed extends Component{
                                       />
                                     </View>
 
-                                    <TouchableOpacity onPress={() => alert('Added to Cart Successfully')}>
+                                    <TouchableOpacity onPress={() => {
+                                      this.addtoCart(item)
+                                      alert('Added to Cart Successfully')
+                                    }}>
                                         <Text style={{fontSize: 14, color: '#B5CDFE', marginLeft: 11}}>Add to Cart</Text>
                                     </TouchableOpacity>
                                 </View>
@@ -128,6 +139,7 @@ export default class RequestFeed extends Component{
   }
 
   render(){
+    console.log('cart count: ' + this.state.myCart.length)
     Parse.setAsyncStorage(AsyncStorage);
     Parse.initialize("myAppId");
     Parse.serverURL = 'http://localhost:1337/parse';
@@ -146,10 +158,14 @@ export default class RequestFeed extends Component{
                     </View> 
 
                      <View>
-                      <Image
-                        source={require('./images/cart.png')}
-                        style={{ width: 26, height: 29, marginLeft: 27}}
-                      />
+                      <TouchableOpacity onPress={() => this.props.navigation.navigate('cart',{
+                        cart: this.state.myCart
+                      })}>
+                          <Image
+                            source={require('./images/cart.png')}
+                            style={{ width: 26, height: 29, marginLeft: 27}}
+                          />
+                      </TouchableOpacity>
                     </View> 
 
                     <View>
@@ -181,10 +197,16 @@ export default class RequestFeed extends Component{
                     
               </View>
 
-              <Image
-                source={require('./images/add.png')}
-                style={{ width: 51, height: 51, position: 'absolute', marginLeft: 12, marginTop: 820, marginLeft: 350 }}
-              />
+              
+                  <View style={{position: 'absolute', marginLeft: 12, marginTop: 820, marginLeft: 350 }}>
+                    <TouchableOpacity onPress={() =>this.props.navigation.navigate('feed2')}>
+                      <Image
+                        source={require('./images/add.png')}
+                        style={{ width: 51, height: 51}}
+                      />
+                    </TouchableOpacity>
+                  </View>
+              
       </View>
     )
   }

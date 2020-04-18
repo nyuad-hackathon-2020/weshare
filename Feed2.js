@@ -52,45 +52,33 @@ export default class Feed2 extends Component{
                     </View>
               </View>
 
-                <View style={{ marginTop: 500,marginLeft: 90,}}>
+                <View style={{ marginTop: 460,marginLeft: 90,}}>
                         <View style={{flexDirection: 'row'}}>
                             <View style={styles.roundbtn}>
-                                <TouchableOpacity>
+                                <TouchableOpacity onPress={() => this.props.navigation.navigate('request')}>
                                         <Text style={styles.txt}>Request</Text>
                                 </TouchableOpacity>
                             </View>
 
-                            <View>
-                                <Image
-                                    source={require('./images/circle.png')}
-                                    style={{ width: 60, height: 60, marginLeft: 35}}
-                                />
-                            </View>
                         </View>
 
-                        <View style={{flexDirection: 'row'}}>
+                        <View>
                             <View style={styles.roundbtn}>
-                                <TouchableOpacity>
+                                <TouchableOpacity onPress={() => this.props.navigation.navigate('donation')}>
                                         <Text style={styles.txt}>Donate</Text>
                                 </TouchableOpacity>
+                                
                             </View>
 
-                            <View>
-                                <Image
-                                    source={require('./images/circle.png')}
-                                    style={{ width: 60, height: 60, marginLeft: 35}}
-                                />
-
-                                <Image
+                            <Image
                                     source={require('./images/rect2.png')}
-                                    style={{ width: 20, height: 20, marginLeft: 54 , position: 'absolute', marginTop: 18, marginRight: 5}}
+                                    style={{ width: 20, height: 20, marginLeft: 174 , position: 'absolute', marginTop: 19, marginRight: 5}}
                                 />
-                            </View>
                         </View>
                 </View>
 
                 <View style={{flex: 1}}>
-                   <TouchableOpacity>
+                   <TouchableOpacity onPress={() =>this.props.navigation.goBack()}>
                         <Image
                             source={require('./images/back.png')}
                             style={{ width: 25, height: 25, marginLeft: 25 }}
@@ -104,7 +92,7 @@ export default class Feed2 extends Component{
 
 const styles = StyleSheet.create({
     roundbtn:{
-        width: 204,
+        width: 254,
         height: 43,
         backgroundColor: 'rgba(122, 166, 254, 0.47)',
         borderRadius: 20,
@@ -117,6 +105,6 @@ const styles = StyleSheet.create({
     txt:{
         fontWeight: '500',
         fontSize: 20,
-        color: '#FFFFFF'
+        color: '#000000'
     }
 })

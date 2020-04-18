@@ -104,6 +104,7 @@ export default class Donation extends Component{
                                                 hashtag: '',
                                                 info: ''
                                             })
+                                            this.props.navigation.replace('requestfeed')
                                         }}>
                                             <Text style={styles.confirm2}>Confirm</Text>
                                         </TouchableOpacity>

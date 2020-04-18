@@ -104,6 +104,7 @@ export default class Request extends Component{
                                                 hashtag: '',
                                                 info: ''
                                             })
+                                            this.props.navigation.replace('rfeed')
                                         }}>
                                             <Text style={styles.confirm2}>Confirm</Text>
                                         </TouchableOpacity>

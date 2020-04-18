@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, Image, Dimensions, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 
 const width = Dimensions.get('window').width
 
-export default class SignIn extends Component{
+class SignIn extends Component{
 
   render(){
   return( 
@@ -34,9 +35,7 @@ export default class SignIn extends Component{
       <View>
       <TouchableOpacity
         style={styles.logInButton}
-        onPress={() => {
-          alert('You tapped the button!');
-        }}
+        onPress={() => this.props.navigation.navigate('login')}
       >
       <Text style={styles.logIn}>Log in</Text>
       </TouchableOpacity>
@@ -44,6 +43,11 @@ export default class SignIn extends Component{
       </View>
     )  
   };
+}
+
+export default function(){
+  const navigation = useNavigation()
+  return <SignIn navigation={navigation} />
 }
 
 

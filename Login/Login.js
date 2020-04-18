@@ -14,9 +14,7 @@ export default class Login extends Component{
       <Text style={styles.logIn}>Log in</Text> 
       <View>
       <TouchableOpacity style={styles.appleButton}
-        onPress={() => {
-          alert('You tapped the button!');
-        }}
+        onPress={() => this.props.navigation.navigate('rfeed')}
       >
       <Image source={require('../images/Path_1232.png')}
             style={{    position: 'absolute',
@@ -80,6 +78,7 @@ export default class Login extends Component{
     )  
   };
 }
+
 
 
 
