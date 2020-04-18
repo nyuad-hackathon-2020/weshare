@@ -46,7 +46,7 @@ export default class Login extends Component{
       />
 
       <TextInput
-        placeholder='Type your Passowrd Here'
+        placeholder='Type your Password Here'
         style={styles.passwordBox}
       />
 
@@ -209,8 +209,11 @@ const styles = StyleSheet.create({
     top:      740,
     width: 210,
     height: 40,
-    color: 'transparent',
     borderRadius: 20,
+    borderColor: '#ffffff',
+    borderStyle: 'solid',
+    borderWidth: 1,
+    backgroundColor: '#5887f9'
   },
 
   confirmWord: {
@@ -219,7 +222,7 @@ const styles = StyleSheet.create({
     top:      7,
     width: 200,
     height: 50,
-    color: '#5F7FC1',
+    color: '#ffffff',
     fontWeight: '500',
     fontSize: 15
   },

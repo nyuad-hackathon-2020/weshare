@@ -63,7 +63,7 @@ export default class Profile extends Component {
             <Text style={styles.info}>San Francisco, CA</Text>
             <Text style={styles.description}>Hi! My name is John!</Text>
           </View>
-          <View style={{ flexDirection: "row", alignSelf: "center", marginTop: 40 }}>
+            <View style={{position: 'absolute', top: 120, left: 100}}>
             <TouchableOpacity style={styles.donbutton}>
               <Text
                 style={{
@@ -93,6 +93,8 @@ export default class Profile extends Component {
                 DONATIONS
               </Text>
             </TouchableOpacity>
+            </View>
+            <View style={{position: 'absolute', top: 126, left: 200}}>
             <TouchableOpacity style={styles.statsbutton}>
               <Image
                 source={require("./images/stats.png")}
@@ -122,18 +124,18 @@ export default class Profile extends Component {
           </View>
           <View
             style={{
-              flex: 1,
-              height: screenHeight * 0.4,
-              alignSelf: "center"
-            }}
+                position: 'absolute',
+                top: 170,
+                left: 20
+              }}
           >
-            <ScrollView style={{ marginTop: screenHeight * 0.01 }}>
+            <View style={{ marginTop: screenHeight * 0.01 }}>
               <TouchableOpacity style={styles.commentContainer}>
                 <View style={{ flexDirection: "row" }}>
                   <View style={styles.profileImageContainer2}>
                     <Image
                       style={styles.profileImage2}
-                      source={require("./images/profile.png")}
+                      source={require("./images/avatarE.png")}
                       resizeMode="cover"
                     />
                   </View>
@@ -143,11 +145,45 @@ export default class Profile extends Component {
                       marginTop: screenHeight * 0.03
                     }}
                   >
-                    Person Surname
+                    Elif Su Ozoglu
                   </Text>
                   <Text
                     style={{
-                      marginLeft: screenWidth * 0.25,
+                      marginLeft: screenWidth * 0.45,
+                      marginTop: screenHeight * 0.03
+                    }}
+                  >
+                    2h
+                  </Text>
+                </View>
+                <Text
+                  style={{ marginLeft: screenWidth * 0.2, color: "#7329A4" }}
+                >
+                  {""}
+                  Thank you so much for your help! This month has been saved,
+                  all thanks to you.{""}
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.commentContainer}>
+                <View style={{ flexDirection: "row" }}>
+                  <View style={styles.profileImageContainer2}>
+                    <Image
+                      style={styles.profileImage2}
+                      source={require("./images/avatarJ.png")}
+                      resizeMode="cover"
+                    />
+                  </View>
+                  <Text
+                    style={{
+                      marginLeft: screenWidth * 0.05,
+                      marginTop: screenHeight * 0.03
+                    }}
+                  >
+                    Nicolas Zilberstein
+                  </Text>
+                  <Text
+                    style={{
+                      marginLeft: screenWidth * 0.37,
                       marginTop: screenHeight * 0.03
                     }}
                   >
@@ -177,11 +213,11 @@ export default class Profile extends Component {
                       marginTop: screenHeight * 0.03
                     }}
                   >
-                    Person Surname
+                    Baran Iscanli
                   </Text>
                   <Text
                     style={{
-                      marginLeft: screenWidth * 0.25,
+                      marginLeft: screenWidth * 0.46,
                       marginTop: screenHeight * 0.03
                     }}
                   >
@@ -201,7 +237,7 @@ export default class Profile extends Component {
                   <View style={styles.profileImageContainer2}>
                     <Image
                       style={styles.profileImage2}
-                      source={require("./images/profile.png")}
+                      source={require("./images/avH.png")}
                       resizeMode="cover"
                     />
                   </View>
@@ -211,11 +247,11 @@ export default class Profile extends Component {
                       marginTop: screenHeight * 0.03
                     }}
                   >
-                    Person Surname
+                   Juan Dolvan 
                   </Text>
                   <Text
                     style={{
-                      marginLeft: screenWidth * 0.25,
+                      marginLeft: screenWidth * 0.47,
                       marginTop: screenHeight * 0.03
                     }}
                   >
@@ -230,7 +266,8 @@ export default class Profile extends Component {
                   all thanks to you.{""}
                 </Text>
               </TouchableOpacity>
-            </ScrollView>
+
+            </View>
           </View>
         </View>
       </View>
