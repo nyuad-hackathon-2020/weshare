@@ -10,10 +10,10 @@ export default class RetailerProfile extends Component{
   return( 
       <View style={{flex: 1}}>
       <View>
-      <Image source={require('./imgs/Image_1.png')}
+      <Image source={require('./images/Image_1.png')}
             style={{    position: 'absolute',
             left:     0,
-            top:      10,}}/>
+            top:      10,width: width}}/>
       </View> 
       <View style={{position: 'absolute',
             left:     0,
@@ -24,48 +24,54 @@ export default class RetailerProfile extends Component{
                                         <TouchableOpacity         onPress={() => {
                                                 alert('You tapped the button!');
                                                 }}>
-                                            <Text style={styles.confirm2}>Confirm</Text>
+                                            <Text style={styles.confirm2}>Review Me</Text>
                                         </TouchableOpacity>
                                 </View>
 
 
-      <View>
-      <TouchableOpacity style={styles.emailBox}
-        onPress={() => {
-          alert('You tapped the button!');
-        }}
-      >
-      <Text style={styles.emailWord}>About</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.emailBox2}
-        onPress={() => {
-          alert('You tapped the button!');
-        }}
-      >
-      <Text style={styles.emailWord2}>Products</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.emailBox3}
-        onPress={() => {
-          alert('You tapped the button!');
-        }}
-      >
-      <Text style={styles.emailWord3}>Reviews</Text>
-      </TouchableOpacity>
-      </View> 
-      <View>
-      <Text style={styles.passwordWord}>Type your password</Text>
-      <Text style={styles.passwordWord2}>Type your password</Text>
+<View style={{backgroundColor: 'green'}}>
+
+</View>
+      <View style={{marginLeft: 18}}>
+        <TouchableOpacity style={styles.emailBox}>
+          <Text style={styles.emailWord}>About</Text>
+        </TouchableOpacity>
+
+       <View style={{flexDirection: 'row'}}>  
+
+           <Text style={{marginTop: 443, marginLeft: 165}}>125</Text>
+          <TouchableOpacity style={styles.emailBox2}>
+              <Text style={styles.emailWord2}>Products</Text>
+          </TouchableOpacity>
+
+       </View>
+       <Text style={{marginLeft: 313, bottom: 15}}>20</Text>
+        <TouchableOpacity style={styles.emailBox3}>
+          <Text style={styles.emailWord3}>Reviews</Text>
+        </TouchableOpacity>
       </View>
+
+      <View>
+        <Text style={{
+          marginTop: 70, 
+          marginLeft: 20,
+          fontSize: 14,
+          color: '#4C5264'
+        }}>We are willing to offer to feed 10 families in need</Text>
+      </View>
+
       <View style={{position: 'absolute',
             left:     0,
-            top:      700,
-            height: 60, 
+            top:      790,
+            borderRadius: 14,
+            height: 51, 
+            marginLeft: 70,
             backgroundColor: '#5887F9', 
-            alignItems: 'center', justifyContent: 'center', width: width}}>
+            alignItems: 'center', justifyContent: 'center', width: 281}}>
                                         <TouchableOpacity         onPress={() => {
                                                 alert('You tapped the button!');
                                                 }}>
-                                            <Text style={styles.confirm2}>Confirm</Text>
+                                            <Text style={styles.confirm2}>Accept Donations</Text>
                                         </TouchableOpacity>
                                 </View>
       </View>
@@ -86,7 +92,7 @@ const styles = StyleSheet.create({
     color: '#ae71fe',
   },
   confirm2:{
-    fontSize: 12,
+    fontSize: 16,
     fontWeight: '500',
     color: '#FFFFFF'
 },

@@ -11,10 +11,18 @@ export default class SignIn extends Component{
       <View style={{flex: 1}}>
        
        <Image source={require('../images/weShareLogo.png')}
-            style={{    position: 'absolute',
-            left:     50,
-            top:      200,}}/>
+            style={{  
+            left:     90,
+            top:      300,}}/>
+            <Text style={{
+              position: 'absolute', 
+              marginTop: 370, 
+              color: '#000000', 
+              fontWeight: '500', 
+              marginLeft: 30,
+              fontSize: 20}}>For the Community, By the Community</Text>
       <View>
+        
       <TouchableOpacity style={styles.getStartedButton}
         onPress={() => {
           alert('You tapped the button!');
@@ -44,42 +52,47 @@ const styles = StyleSheet.create({
   getStarted: {
     position: 'absolute',
     left:     110,
-    top:      10,
+    top:      15,
     width: 200,
     height: 50,
     alignItems: 'center',
-    color: '#ae71fe',
+    color: '#FFFFFF',
+    fontSize: 20,
+    fontWeight: '500'
   },
   logIn: {
     position: 'absolute',
     left:     130,
-    top:      10,
+    top:      15,
     width: 200,
     height: 50,
-    color: '#ae71fe',
+    color: '#FFFFFF',
+    fontSize: 20,
+    fontWeight: '500'
   },
   getStartedButton: {
     position: 'absolute',
-    left:     25,
-    top:      400,
+    left:     60,
+    top:      450,
     width: 310,
-    height: 50,
+    height: 60,
     borderRadius: 20,
     borderColor: '#a4c2fe',
     borderStyle: 'solid',
     borderWidth: 1,
-    backgroundColor: 'rgba(122, 166, 254, 0.56)',
+    backgroundColor: 'rgba(122, 166, 254, 0.66)',
+    alignItems: 'center'
   },
   logInButton: {
     position: 'absolute',
-    left:     25,
-    top:      500,
+    left:     60,
+    top:      550,
     width: 310,
-    height: 50,
+    height: 60,
     borderRadius: 20,
     borderColor: '#a4c2fe',
     borderStyle: 'solid',
     borderWidth: 1,
-    backgroundColor: 'rgba(122, 166, 254, 0.56)',
+    backgroundColor: 'rgba(170, 115, 254, 0.62)',
   },
 });

@@ -14,6 +14,8 @@ import Feed2 from './Feed2'
 import Request from './Request'
 import Donation from './Donation'
 import Confirmation from './Confirmation'
+import retailerProfile from './retailerProfile'
+
 
 const Stack = createStackNavigator();
 
@@ -23,7 +25,7 @@ export default function App(){
             <Stack.Navigator headerMode={null}>
               {/* <Stack.Screen name="Login" component={Login} />
               <Stack.Screen name="SignIn" component={SignIn} /> */}
-              <Stack.Screen name="Request" component={Confirmation} />
+              <Stack.Screen name="Request" component={Login} />
               
             </Stack.Navigator>
           </NavigationContainer>
