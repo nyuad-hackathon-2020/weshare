@@ -19,7 +19,7 @@ export default class Login extends Component{
       <Image source={require('../images/Path_1232.png')}
             style={{    position: 'absolute',
             left:     50,
-            top:      14,}}/>
+            top:      14,}}/>      
       <Text style={styles.appleWord}>Sign in with Apple</Text>
       </TouchableOpacity>
       </View> 
@@ -49,6 +49,17 @@ export default class Login extends Component{
         placeholder='Type your Passowrd Here'
         style={styles.passwordBox}
       />
+
+      <View>
+      <TouchableOpacity
+        style={styles.confirmButton}
+        onPress={() => {
+          alert('You tapped the button!');
+        }}
+      >
+      <Text style={styles.confirmWord}>Confirm</Text>
+      </TouchableOpacity>
+      </View>      
 
       <Text style={styles.safe}>You are completely safe</Text>
       <Text style={styles.safe2}>Read our Terms & Conditions</Text>
@@ -191,6 +202,26 @@ const styles = StyleSheet.create({
     width: 256,
     height: 50,
     color: '#ae71fe',
+  },
+  confirmButton: {
+    position: 'absolute',
+    left:     100,
+    top:      740,
+    width: 210,
+    height: 40,
+    color: 'transparent',
+    borderRadius: 20,
+  },
+
+  confirmWord: {
+    position: 'absolute',
+    left:     75,
+    top:      7,
+    width: 200,
+    height: 50,
+    color: '#5F7FC1',
+    fontWeight: '500',
+    fontSize: 15
   },
   safe:{
     fontWeight: '500',
