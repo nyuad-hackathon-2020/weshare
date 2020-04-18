@@ -59,6 +59,13 @@ export default class RequestFeed extends Component{
     });
   }
 
+  // showImage(name){
+  //   switch(name){
+  //     case 'clothes':
+
+  //   }
+  // }
+
    showData =() =>{
     return this.state.requestData.map((item, index) =>{
         // <Text>{item.get('Message')}</Text>
@@ -108,6 +115,7 @@ export default class RequestFeed extends Component{
 
                                 <View>
                                     <Text style={{marginLeft: 17, fontSize: 14, fontWeight: '500', color: '#562DC4'}}>{item.get('Message')}</Text>
+                                    <Text style={{marginLeft: 17, fontSize: 12, fontWeight: '500', color: 'gray', marginTop: 10}}>{item.get('Information')}</Text>
                                 </View>
                          </View>
 
@@ -120,14 +128,16 @@ export default class RequestFeed extends Component{
                                       />
                                     </View>
 
-                                    <Text style={{fontSize: 14, color: '#B5CDFE', marginLeft: 11}}>Support Cause</Text>
+                                   {item.get('Category') == 'Offer' ?
+                                    <Text style={{fontSize: 14, color: '#B5CDFE', marginLeft: 11}}>Accept Donations</Text>:
+                                    <Text style={{fontSize: 14, color: '#B5CDFE', marginLeft: 11}}>Support Cause</Text>}
                                 </View>
 
                                 <View style={{flexDirection: 'row', alignItems: 'center', marginLeft: 20}}>
                                     <View>
                                       <Image
-                                        source={require('./images/path110.png')}
-                                        style={{ width: 12, height: 16, marginLeft: 40}}
+                                        source={require('./images/cartplus.png')}
+                                        style={{ width: 18, height: 18, marginLeft: 40}}
                                       />
                                     </View>
 
@@ -135,7 +145,7 @@ export default class RequestFeed extends Component{
                                       this.addtoCart(item)
                                       alert('Added to Cart Successfully')
                                     }}>
-                                        <Text style={{fontSize: 14, color: '#B5CDFE', marginLeft: 11}}>Add to Cart</Text>
+                                        <Text style={{fontSize: 14, color: '#B5CDFE', marginLeft: 11, marginTop: 4}}>Add to Cart</Text>
                                     </TouchableOpacity>
                                 </View>
                          </View>

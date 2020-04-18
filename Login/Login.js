@@ -198,13 +198,13 @@ const styles = StyleSheet.create({
     color: '#5F7FC1',
     marginTop: 14,
     marginTop: 800,
-    marginLeft: 115
+    marginLeft: 130
 },
 safe2:{
     fontWeight: '500',
     fontSize: 15,
     color: '#CAA8FE',
     marginTop: 7,
-    marginLeft: 95
+    marginLeft: 110
 }
 });

@@ -26,6 +26,7 @@ export default class Request extends Component{
             name: 'Harshit',
             message: this.state.req,
             category: this.state.hashtag,
+            username: 'HarshitG24',
             price: 40
         }
 

@@ -91,6 +91,14 @@ class ShoppingCart extends Component{
             )
         })
     }
+
+    noCart(){
+      return(
+        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', justifyContent: 'center', marginTop: 200}}>
+              <Text>Cart Empty, contributions are most welcome</Text>
+        </View>
+      )
+    }
     render(){
         return(
             <View style={{flex: 1, marginHorizontal: 19}}>
@@ -129,7 +137,7 @@ class ShoppingCart extends Component{
 
                         <View style={{flex: 0.9, marginTop: 30}}>
                             <ScrollView>
-                                        {this.showMyCart()}
+                                        {this.props.route.params.cart.length > 0 ? this.showMyCart() : this.noCart()}
                             </ScrollView>
                         </View>
 
