@@ -7,15 +7,17 @@ import {
     TextInput,
     Button,
     TouchableOpacity,
-    Keyboard
+    Keyboard,
+    Dimensions
 }from 'react-native'
 
+const width = Dimensions.get('window').width
 
 export default class Payment extends Component{
     render(){
         return(
             <View style={{flex: 1}}>
-                    <View style={{height: 90, marginLeft: 17, marginTop: 18, flexDirection: 'row', alignItems: 'center', width: 360}}>
+                    <View style={{height: 90, marginTop: 52, flexDirection: 'row', alignItems: 'center', width: width}}>
                     <View style={{backgroundColor: '#7874D5', flex: 1, width: 'auto', flexDirection: 'column', height: 100}}>
                       <View style={{flexDirection: 'row',justifyContent: 'space-between', marginBottom: 30}}>
                         <Text style={styles.txt}>Ellie</Text>
@@ -33,7 +35,7 @@ export default class Payment extends Component{
               <View>
                 <Image
                     source={require('./images/Payment.png')}
-                    style={{height: 60, margin: 5 }}
+                    style={{height: 60,width: width}}
                 />
               </View>
               <View style={{marginLeft: 30, marginRight: 20}}>
@@ -59,12 +61,12 @@ export default class Payment extends Component{
                 
               </View>
             </View>  
-              <View style={{flexDirection: 'row' ,alignItems: 'center', position: 'absolute', bottom: 0   }}>
+              <View style={{flexDirection: 'row' ,alignItems: 'center', position: 'absolute', bottom: 30}}>
                 <View>
                     <TouchableOpacity>
                           <Image
                               source={require('./images/back.png')}
-                              style={{ width: 25, height: 25, marginLeft: 25 }}
+                              style={{ width: 25, height: 25, marginLeft: 25, marginTop: 5 }}
                           />
                     </TouchableOpacity>
                 </View>
@@ -88,9 +90,9 @@ export default class Payment extends Component{
 
 const styles = StyleSheet.create({
     roundbtn:{
-        width: 204,
+        width: 250,
         height: 43,
-        backgroundColor: 'rgba(122, 166, 254, 0.47)',
+        backgroundColor: '#7874D5',
         borderRadius: 20,
         justifyContent: 'center',
         alignItems: 'center',
@@ -111,7 +113,7 @@ const styles = StyleSheet.create({
     confirm:{
       fontWeight: '500',
       fontSize: 14,
-      marginTop: 8,
+      marginTop: 4,
       color: '#FFFFFF',
       backgroundColor: "#7874D5",
     },
