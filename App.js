@@ -16,6 +16,9 @@ import Donation from './Donation'
 import Confirmation from './Confirmation'
 import retailerProfile from './retailerProfile'
 import ShoppingCart from './ShoppingCart'
+import profile3 from './profile3'
+import profile2 from './profile2'
+import Payment from './Payment'
 
 
 const Stack = createStackNavigator();
@@ -25,7 +28,9 @@ export default function App(){
           <NavigationContainer>
             <Stack.Navigator headerMode={null}>
               {/* <Stack.Screen name="Login" component={Login} />
-              <Stack.Screen name="SignIn" component={SignIn} /> */}
+              // <Stack.Screen name="SignIn" component={SignIn} /> */}
+              {/* <Stack.Screen name="profile" component={Payment} /> */}
+
               <Stack.Screen name="signin" component={SignIn} />
               <Stack.Screen name="login" component={Login} />
               <Stack.Screen name="feed2" component={Feed2} />

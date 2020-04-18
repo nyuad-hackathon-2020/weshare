@@ -65,7 +65,7 @@ export default class Profile extends Component {
                 style={{
                   color: "#7329A4",
                   textAlign: "center",
-                  fontFamily: "Circular Std",
+                 // fontFamily: "Circular Std",
                   fontStyle: "normal",
                   fontWeight: "500",
                   fontSize: 38.8,
@@ -79,7 +79,7 @@ export default class Profile extends Component {
                 style={{
                   color: "#7329A4",
                   textAlign: "center",
-                  fontFamily: "Circular Std",
+                //  fontFamily: "Circular Std",
                   fontStyle: "normal",
                   fontWeight: "500",
                   fontSize: 10,
@@ -105,7 +105,7 @@ export default class Profile extends Component {
                 style={{
                   color: "#7329A4",
                   textAlign: "center",
-                  fontFamily: "Circular Std",
+                //  fontFamily: "Circular Std",
                   fontStyle: "normal",
                   fontWeight: "500",
                   fontSize: 10,
@@ -244,8 +244,8 @@ const styles = StyleSheet.create({
     alignSelf: "center"
   },
   capitalLetter: {
-    fontFamily: "Circular Std",
-    fontStyle: "normal",
+   // fontFamily: "Circular Std",
+   // fontStyle: "normal",
     fontWeight: "500",
     fontSize: 14,
     lineHeight: 70,
@@ -265,18 +265,18 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 18,
-    fontWeight: 600,
-    fontFamily: "Circular Std",
-    fontStyle: "normal",
+    fontWeight: '600',
+    //fontFamily: "Circular Std",
+  //  fontStyle: "normal",
     lineHeight: 25,
     color: "#000000",
     marginTop: screenHeight * -0.145
   },
   info: {
     fontSize: 11,
-    fontWeight: 500,
-    fontFamily: "Circular Std",
-    fontStyle: "normal",
+    fontWeight: '500',
+    //fontFamily: "Circular Std",
+  //  fontStyle: "normal",
     color: "#000000",
     marginTop: 0
   },
@@ -293,8 +293,8 @@ const styles = StyleSheet.create({
     marginTop: screenHeight * 0.06,
     textAlign: "center",
     color: "#7329A4",
-    fontFamily: "Circular Std",
-    fontStyle: "bold",
+    //fontFamily: "Circular Std",
+   // fontStyle: "bold",
     fontWeight: "500"
   },
   commentContainer: {

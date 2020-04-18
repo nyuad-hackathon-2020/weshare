@@ -6,16 +6,17 @@ import {
     Image,
     TextInput,
     Button,
-    TouchableOpacity
+    TouchableOpacity,
+    Keyboard
 }from 'react-native'
 
 
-export default class Feed2 extends Component{
+export default class Payment extends Component{
     render(){
         return(
             <View style={{flex: 1}}>
                     <View style={{height: 90, marginLeft: 17, marginTop: 18, flexDirection: 'row', alignItems: 'center', width: 360}}>
-                    <View style={{background: '#7874D5', flex: 1, width: 'auto', flexDirection: 'column', height: 100}}>
+                    <View style={{backgroundColor: '#7874D5', flex: 1, width: 'auto', flexDirection: 'column', height: 100}}>
                       <View style={{flexDirection: 'row',justifyContent: 'space-between', marginBottom: 30}}>
                         <Text style={styles.txt}>Ellie</Text>
                         <Text style={styles.txt}>45 AED</Text>
@@ -105,15 +106,15 @@ const styles = StyleSheet.create({
     },
     header:{
       flex: 1,
-      background: '#AE71FE',
+      backgroundColor: '#AE71FE',
       width: 'auto',
     },
     confirm:{
-      fontWeight: 500,
+      fontWeight: '500',
       fontSize: 14,
       lineHeight: 18,
       color: '#FFFFFF',
-      background: "#7874D5",
+      backgroundColor: "#7874D5",
     },
     inputContainer: {
       paddingTop: 15
@@ -121,7 +122,7 @@ const styles = StyleSheet.create({
     textInput: {  
       borderBottomWidth: 1,
       height: 50,
-      fontWeight: 500,
+      fontWeight: '500',
       fontSize: 12,
       lineHeight: 15, 
 
