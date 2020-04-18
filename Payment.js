@@ -71,12 +71,11 @@ export default class Payment extends Component{
                 <View style={{marginLeft: 40,}}>
                         <View style={styles.roundbtn}>
                                 <TouchableOpacity onPress={() => {}} style={{flexDirection: 'row'}}>
-                                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.1001 11.4L9.2001 14.5L16.4001 7.40002" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-                                  <Text style={styles.confirm}>   Confirm</Text>
+                                    <Image
+                                        source={require('./images/success.png')}
+                                        style={{ width: 25, height: 25 }}
+                                    />
+                                    <Text style={styles.confirm}>  Confirm</Text>
                                 </TouchableOpacity>
                         </View>                              
                 </View>
@@ -112,7 +111,7 @@ const styles = StyleSheet.create({
     confirm:{
       fontWeight: '500',
       fontSize: 14,
-      lineHeight: 18,
+      marginTop: 8,
       color: '#FFFFFF',
       backgroundColor: "#7874D5",
     },
