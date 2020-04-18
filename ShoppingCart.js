@@ -15,6 +15,107 @@ class ShoppingCart extends Component{
         requestData: []
     }
 
+    showImage(name){
+      switch(name){
+        case 'Clothes':
+          return(
+            <Image
+              source={require('./images/clothes.jpg')}
+              style={{ width: 64, height: 64, marginLeft: 40 }}
+            />
+          )
+         
+  
+          case 'Food':
+          return(
+            <Image
+              source={require('./images/food.jpg')}
+              style={{ width: 64, height: 64, marginLeft: 40 }}
+            />
+          )
+  
+          case 'Electronics':
+          return(
+            <Image
+              source={require('./images/electron.jpg')}
+              style={{ width: 64, height: 64, marginLeft: 40 }}
+            />
+          )
+  
+          case 'Groceries':
+          return(
+            <Image
+              source={require('./images/grocery.jpg')}
+              style={{ width: 64, height: 64, marginLeft: 40 }}
+            />
+          )
+  
+          case 'Baby':
+          return(
+            <Image
+              source={require('./images/baby.jpg')}
+              style={{ width: 64, height: 64, marginLeft: 40 }}
+            />
+          )
+
+          case 'Medicine':
+          return(
+            <Image
+              source={require('./images/medicine.jpg')}
+              style={{ width: 64, height: 64, marginLeft: 40 }}
+            />
+          )
+  
+          case 'Offer':
+          return(
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('retailer')}>
+              <Image
+                source={require('./images/offerr.png')}
+                style={{ width: 64, height: 64, marginLeft: 40 }}
+              />
+            </TouchableOpacity>
+          )
+          
+        
+      }
+    }
+  
+    showAvatar(name){
+      switch(name){
+        case 'Harshit':
+          return(
+            <Image
+              source={require('./images/avH.png')}
+              style={{ width: 40, height: 40 }}
+            />
+          )
+  
+          case 'Lucy':
+            return(
+              <Image
+                source={require('./images/avatarE.png')}
+                style={{ width: 40, height: 40 }}
+              />
+            )
+  
+          case 'James':
+          return(
+            <Image
+              source={require('./images/avatarJ.png')}
+              style={{ width: 40, height: 40 }}
+            />
+          )
+  
+          case 'Neel':
+          return(
+            <Image
+              source={require('./images/avH.png')}
+              style={{ width: 40, height: 40 }}
+            />
+          )
+      }
+    }
+
     showMyCart = () =>{
         return this.props.route.params.cart.map((item, index) =>{
             // <Text>{item.get('Message')}</Text>
@@ -24,14 +125,15 @@ class ShoppingCart extends Component{
                        <View style={{height: 20, width: phonewidth, marginBottom: 30,  height: 200}}>
                              <View style={{flexDirection: 'row', alignItems: 'center'}}>
                                     <View>
-                                        <Image
+                                        {/* <Image
                                           source={require('./images/circle2.png')}
                                           style={{ width: 40, height: 40}}
                                         />
                                         <Image
                                           source={require('./images/man.png')}
                                           style={{ width: 16, height: 16, position: 'absolute', marginLeft: 12, marginTop: 10}}
-                                        />
+                                        /> */}
+                                        {this.showAvatar(item.get('Name'))}
                                     </View>
     
                                     <View style={{marginLeft: 10}}>
@@ -49,14 +151,16 @@ class ShoppingCart extends Component{
     
                              <View style={{marginTop: 30, flexDirection: 'row'}}>
                                     <View>
-                                      <Image
+                                      {/* <Image
                                         source={require('./images/purplerect.png')}
                                         style={{ width: 64, height: 64, marginLeft: 40}}
-                                      />
+                                      /> */}
+                                      {this.showImage(item.get('Category'))}
                                     </View>
     
                                     <View>
                                         <Text style={{marginLeft: 17, fontSize: 14, fontWeight: '500', color: '#562DC4'}}>{item.get('Message')}</Text>
+                                        <Text style={{marginLeft: 17, fontSize: 12, fontWeight: '500', color: 'gray', marginTop: 10, height: 50}}>{item.get('Information')}</Text>
                                     </View>
                              </View>
     

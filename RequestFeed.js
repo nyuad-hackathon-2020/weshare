@@ -103,6 +103,14 @@ export default class RequestFeed extends Component{
           />
         )
 
+        case 'Medicine':
+          return(
+            <Image
+              source={require('./images/medicine.jpg')}
+              style={{ width: 64, height: 64, marginLeft: 40 }}
+            />
+          )
+
         case 'Offer':
         return(
           <TouchableOpacity onPress={() => this.props.navigation.navigate('retailer')}>
@@ -126,7 +134,7 @@ export default class RequestFeed extends Component{
           />
         )
 
-        case 'Elif':
+        case 'Lucy':
           return(
             <Image
               source={require('./images/avatarE.png')}
@@ -134,7 +142,7 @@ export default class RequestFeed extends Component{
             />
           )
 
-        case 'John':
+        case 'James':
         return(
           <Image
             source={require('./images/avatarJ.png')}
@@ -142,7 +150,7 @@ export default class RequestFeed extends Component{
           />
         )
 
-        case 'Nico':
+        case 'Neel':
         return(
           <Image
             source={require('./images/avH.png')}
@@ -202,9 +210,9 @@ export default class RequestFeed extends Component{
                                  
                                 </View>
 
-                                <View>
+                                <View style={{justifyContent: 'center', marginRight: 65}}>
                                     <Text style={{marginLeft: 17, fontSize: 14, fontWeight: '500', color: '#562DC4'}}>{item.get('Message')}</Text>
-                                    <Text style={{marginLeft: 17, fontSize: 12, fontWeight: '500', color: 'gray', marginTop: 10, height: 50}}>{item.get('Information')}</Text>
+                                    <Text style={{marginLeft: 17, fontSize: 12, fontWeight: '500', color: 'gray', marginTop: 10, height: 50, marginRight: 65}}>{item.get('Information')}</Text>
                                 </View>
                          </View>
 
@@ -225,16 +233,16 @@ export default class RequestFeed extends Component{
                                 <View style={{flexDirection: 'row', alignItems: 'center', marginLeft: 20}}>
                                     <View>
                                       <Image
-                                        source={require('./images/cartplus.png')}
+                                        source={require('./images/charity.png')}
                                         style={{ width: 18, height: 18, marginLeft: 40}}
                                       />
                                     </View>
 
                                     <TouchableOpacity onPress={() => {
                                       this.addtoCart(item)
-                                      alert('Added to Cart Successfully')
+                                      alert('Added to Box Successfully')
                                     }}>
-                                        <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11, marginTop: 4}}>Add to Cart</Text>
+                                        <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11}}>Add to Box</Text>
                                     </TouchableOpacity>
                                 </View>
                          </View>
@@ -270,8 +278,8 @@ export default class RequestFeed extends Component{
                         cart: this.state.myCart
                       })}>
                           <Image
-                            source={require('./images/cart.png')}
-                            style={{ width: 26, height: 29, marginLeft: 27}}
+                            source={require('./images/package.png')}
+                            style={{ width: 24, height: 24, marginLeft: 27}}
                           />
                       </TouchableOpacity>
                     </View> 

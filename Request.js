@@ -23,11 +23,11 @@ export default class Request extends Component{
 
     sendRequest = async() =>{
         params={
-            name: 'Harshit',
+            name: 'Lucy',
             message: this.state.req,
             category: this.state.hashtag,
-            username: 'HarshitG24',
-            price: 40,
+            username: 'Lucifer',
+            price: 20,
             info: this.state.info
         }
 
