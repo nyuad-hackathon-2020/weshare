@@ -68,12 +68,37 @@ export default class RetailerProfile extends Component{
             marginLeft: 70,
             backgroundColor: '#5887F9', 
             alignItems: 'center', justifyContent: 'center', width: 281}}>
+                                        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+
+                                          <Image source={require('./images/success.png')}
+                                            style={{
+                                              width: 25,
+                                              height: 25,
+                                              right: 7
+                                            }} />
+
                                         <TouchableOpacity         onPress={() => {
-                                                alert('You tapped the button!');
+                                                alert('Donations Accepted, Thank you');
                                                 }}>
+                                               
                                             <Text style={styles.confirm2}>Accept Donations</Text>
+
                                         </TouchableOpacity>
+
+                                        </View>
                                 </View>
+
+            <View style={{  position: 'absolute',
+                      left: 20,
+                      top: 40}}>
+              <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
+                  <Image source={require('./images/back.png')}
+                    style={{
+                      width: 25,
+                      height: 25
+                    }} />
+              </TouchableOpacity>
+            </View>
       </View>
     )  
   };
@@ -182,3 +207,4 @@ const styles = StyleSheet.create({
     color: '#ae71fe',
   },
 });
+

@@ -93,10 +93,17 @@ export default class RequestFeed extends Component{
 
                          <View style={{marginTop: 30, flexDirection: 'row'}}>
                                 <View>
-                                  <Image
+                                 
+                                    {item.get('Category') == 'Offer' ? <TouchableOpacity onPress={() => this.props.navigation.navigate('retailer')}>
+                                      <Image
+                                        source={require('./images/purplerect.png')}
+                                        style={{ width: 64, height: 64, marginLeft: 40}}
+                                      />
+                                    </TouchableOpacity> : <Image
                                     source={require('./images/purplerect.png')}
                                     style={{ width: 64, height: 64, marginLeft: 40}}
-                                  />
+                                  />}
+                                 
                                 </View>
 
                                 <View>
@@ -156,7 +163,7 @@ export default class RequestFeed extends Component{
                         style={{ width: 16, height: 16, position: 'absolute', marginLeft: 12, marginTop: 10 }}
                       />
                     </View> 
-
+                   
                      <View>
                       <TouchableOpacity onPress={() => this.props.navigation.navigate('cart',{
                         cart: this.state.myCart
@@ -189,6 +196,12 @@ export default class RequestFeed extends Component{
                       />
                     </View>
               </View>
+
+             {
+               this.state.myCart.length > 0 ?  <View style={{position: 'absolute', width: 14, height: 14, borderRadius: 7, marginLeft: 2, backgroundColor: 'red', marginTop: 48, marginLeft: 100, alignItems: 'center', justifyContent: 'center'}}>
+               <Text style={{color: 'white', fontSize: 12, fontWeight: '500'}}>{this.state.myCart.length}</Text>
+     </View> : null
+             }
 
               <View style={{flex: 1, marginTop: 1, marginHorizontal: 19}}>
                   <ScrollView>
