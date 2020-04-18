@@ -63,7 +63,7 @@ export default class Profile extends Component {
             <Text style={styles.info}>San Francisco, CA</Text>
             <Text style={styles.description}>Hi! My name is John!</Text>
           </View>
-          <View style={{ flexDirection: "row", alignSelf: "center" }}>
+          <View style={{ flexDirection: "row", alignSelf: "center", marginTop: 40 }}>
             <TouchableOpacity style={styles.donbutton}>
               <Text
                 style={{
@@ -265,7 +265,7 @@ const styles = StyleSheet.create({
     width: 56,
     borderWidth: 0,
     borderRadius: 75,
-    overlayColor: "#FFFFFF"
+    overlayColor: "#FFFFFF",
   },
   name: {
     fontSize: 18,
@@ -274,7 +274,8 @@ const styles = StyleSheet.create({
   //  fontStyle: "normal",
     lineHeight: 25,
     color: "#000000",
-    marginTop: screenHeight * -0.145
+    // marginTop: screenHeight * -0.145,
+    // marginBottom: 10
   },
   info: {
     fontSize: 11,
@@ -285,16 +286,17 @@ const styles = StyleSheet.create({
     marginTop: 0
   },
   body: {
-    marginTop: 40
+    // marginTop: 40
   },
   bodyContent: {
     flex: 1,
     alignItems: "center",
-    padding: 35
+    paddingLeft: 35,
+    paddingRight: 35,
   },
   description: {
     fontSize: 14,
-    marginTop: screenHeight * 0.06,
+    // marginTop: screenHeight * 0.06,
     textAlign: "center",
     color: "#7329A4",
     //fontFamily: "Circular Std",
