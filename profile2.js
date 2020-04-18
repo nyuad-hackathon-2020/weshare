@@ -26,21 +26,25 @@ export default class Profile extends Component {
               style={{
                 width: 15,
                 height: 15,
-                marginTop: screenHeight * 0.035,
+                marginTop: screenHeight * 0.06,
                 tintColor: "purple"
               }}
             />
           </TouchableOpacity>
-          <TouchableOpacity>
-            <Text style={styles.capitalLetter}>PROFILE</Text>
-          </TouchableOpacity>
+
+          <View style={{marginTop: 25}}>
+            <TouchableOpacity>
+              <Text style={styles.capitalLetter}>PROFILE</Text>
+            </TouchableOpacity>
+          </View>
+
           <TouchableOpacity>
             <Image
               source={require("./images/threedot.png")}
               style={{
                 width: 3,
                 height: 15,
-                marginTop: screenHeight * 0.035,
+                marginTop: screenHeight * 0.056,
                 tintColor: "purple"
               }}
             />
@@ -241,7 +245,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     width: screenWidth * 1.3,
-    alignSelf: "center"
+    alignSelf: "center",
   },
   capitalLetter: {
    // fontFamily: "Circular Std",
