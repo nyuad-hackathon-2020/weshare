@@ -173,8 +173,8 @@ class ShoppingCart extends Component{
                                           />
                                         </View>
     
-                                        <Text style={{fontSize: 14, color: '#B5CDFE', marginLeft: 11}}>Price: </Text>
-                                        <Text style={{fontSize: 14, color: '#B5CDFE', marginLeft: 11}}>{item.get('Price')}</Text>
+                                        <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11}}>Price: </Text>
+                                        <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11}}>{item.get('Price')}</Text>
                                     </View>
     
                                     {/* <View style={{flexDirection: 'row', alignItems: 'center', marginLeft: 20}}>
@@ -264,7 +264,10 @@ class ShoppingCart extends Component{
                                                         source={require('./images/success.png')}
                                                         style={{ width: 22, height: 22 }}
                                                       />
-                                                     <TouchableOpacity onPress={() => this.props.navigation.navigate('payment')}>
+                                                     <TouchableOpacity onPress={() => this.props.navigation.navigate('payment',{
+
+                                                       arr: this.props.route.params.cart
+                                                     })}>
                                                       <Text style={{fontWeight: '500', fontSize: 14, color: '#FFFFFF', marginLeft: 10}}>Confirm</Text>
                                                     </TouchableOpacity>
                                             </View>

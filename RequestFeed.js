@@ -58,6 +58,10 @@ export default class RequestFeed extends Component{
             requestData: [object, ...this.state.requestData]
         })
     });
+
+    subscription.on('delete', (object) => {
+      this.fetchAllRequests()
+  });
   }
 
   showImage(name){

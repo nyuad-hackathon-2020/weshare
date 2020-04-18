@@ -10,10 +10,16 @@ import {
     Keyboard,
     Dimensions
 }from 'react-native'
+import { useRoute, useNavigation } from '@react-navigation/native'
 
 const width = Dimensions.get('window').width
 
-export default class Payment extends Component{
+class Payment extends Component{
+
+  deleteData(){
+        // console.log('cart count: ' + this.props.route.params.arr.length)
+        
+  }
     render(){
         return(
             <View style={{flex: 1}}>
@@ -73,6 +79,7 @@ export default class Payment extends Component{
                 <View style={{marginLeft: 40,}}>
                         <View style={styles.roundbtn}>
                                 <TouchableOpacity onPress={() => {
+                                  this.deleteData()
                                   alert('Thank you for making payment')
                                   this.props.navigation.replace('rfeed')
                                 }} style={{flexDirection: 'row'}}>
@@ -89,6 +96,12 @@ export default class Payment extends Component{
             </View>
         )
     }
+}
+
+export default function(){
+  const route = useRoute()
+  const navigation = useNavigation()
+  return <Payment route={route} navigation={navigation}/>
 }
 
 const styles = StyleSheet.create({
