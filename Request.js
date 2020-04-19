@@ -49,7 +49,6 @@ export default class Request extends Component{
     // }
 
     render(){
-        var data = [["C", "Java", "JavaScript", "PHP"]];
         Parse.setAsyncStorage(AsyncStorage);
         Parse.initialize("myAppId");
         Parse.serverURL = 'http://localhost:1337/parse';
@@ -108,7 +107,7 @@ export default class Request extends Component{
                         value={this.state.hashtag}
                         style={styles.txt3}/>
                         
-                        
+
                         <Text style={styles.cat}> Additional Information</Text>
                         <TextInput
                             placeholder='Additional Information'

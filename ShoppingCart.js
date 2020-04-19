@@ -9,7 +9,7 @@ import {
 }from 'react-native'
 import { useRoute, useNavigation} from '@react-navigation/native'
 
-class ShoppingCart extends Component{
+export default class ShoppingCart extends Component{
 
     state={
         requestData: []
@@ -269,10 +269,7 @@ class ShoppingCart extends Component{
                                                         source={require('./images/success.png')}
                                                         style={{ width: 22, height: 22 }}
                                                       />
-                                                     <TouchableOpacity onPress={() => this.props.navigation.navigate('delivery',{
-
-                                                       arr: this.props.route.params.cart
-                                                     })}>
+                                                     <TouchableOpacity onPress={() => this.props.navigation.navigate('delivery')}>
                                                       <Text style={{fontWeight: '500', fontSize: 14, color: '#FFFFFF', marginLeft: 10}}>Confirm</Text>
                                                     </TouchableOpacity>
                                             </View>
@@ -290,10 +287,10 @@ class ShoppingCart extends Component{
     }
 }
 
-export default function(){
-    const route = useRoute()
-    const navigation = useNavigation()
-    return <ShoppingCart route={route} navigation={navigation} />
-}
+// export default function(){
+//     const route = useRoute()
+//     const navigation = useNavigation()
+//     return <ShoppingCart route={route} navigation={navigation} />
+// }
 
 

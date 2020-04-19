@@ -303,7 +303,7 @@ class ShowDonations extends Component{
                                 <View style={styles.btn}>
                                     <TouchableOpacity onPress={() => {
                                         this.sendRequest()
-                                        this.props.navigation.replace('rfeed')
+                                        this.props.navigation.navigate('rfeed')
                                         alert('Request made succesfully')
                                     }}>
                                         <Text style={styles.txt2}>Request</Text>
