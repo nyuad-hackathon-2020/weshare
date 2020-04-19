@@ -51,9 +51,14 @@ export default class Donation extends Component{
                         source={require('./images/circle.png')}
                         style={{width: 40, height: 40}}
                       />
-                      <Image
-                        source={require('./images/man.png')}
-                        style={{ width: 16, height: 16, position: 'absolute', marginLeft: 12, marginTop: 10 }}
+                     <Image
+                        source={require('./images/avatar2.png')}
+                        style={{ resizeMode: "cover",
+                        height: 45,
+                        width: 45,
+                        borderWidth: 0,
+                        borderRadius: 75,
+                        position: 'absolute', top: -4, left: -4}}
                       />
                     </View> 
 
@@ -69,10 +74,12 @@ export default class Donation extends Component{
                   
 
                     <View>
-                      <Image
-                        source={require('./images/search.png')}
-                        style={{ width: 20, height: 20, marginLeft: 85}}
-                      />
+                    <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
+                        <Image
+                            source={require('./images/delete.png')}
+                            style={{ width: 20, height: 20, marginLeft: 85}}
+                        />
+                      </TouchableOpacity>
                     </View>
                  </View>
 

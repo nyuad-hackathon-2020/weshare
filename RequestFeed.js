@@ -237,30 +237,45 @@ export default class RequestFeed extends Component{
                          <View style={{flexDirection: 'row', marginTop: 40}}>
                                 <View style={{flexDirection: 'row', alignItems: 'center'}}>
                                     <View>
-                                      <Image
+                                      {item.get('Category') == 'Offer' || item.get('Type') == 'donation'
+                                      ? <TouchableOpacity onPress={() => alert('Donation Accepted')}>
+                                        <Image
+                                       source={require('./images/gift.png')}
+                                       style={{ width: 16, height: 14, marginLeft: 120}}
+                                     />
+                                      </TouchableOpacity> : <Image
                                         source={require('./images/Heart.png')}
                                         style={{ width: 16, height: 14, marginLeft: 40}}
                                       />
+                                      }
                                     </View>
 
                                    {item.get('Category') == 'Offer' || item.get('Type') == 'donation' ?
-                                    <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11}}>Accept Donations</Text>:
-                                    <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11}}>Support Cause</Text>}
+                                    <TouchableOpacity onPress={() => alert('Donation Accepted')}>
+                                      <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11}}>Accept Donations</Text>
+                                    </TouchableOpacity>:
+                                    <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11}}>Support Cause</Text>
+                                   }
                                 </View>
 
                                 <View style={{flexDirection: 'row', alignItems: 'center', marginLeft: 20}}>
                                     <View>
-                                      <Image
-                                        source={require('./images/basket_heart.png')}
-                                        style={{ width: 18, height: 18, marginLeft: 40}}
-                                      />
+                                      {
+                                        item.get('Category') == 'Offer' || item.get('Type') == 'donation' ?null :<Image
+                                         source={require('./images/basket_heart.png')}
+                                         style={{ width: 18, height: 18, marginLeft: 40}}
+                                       />
+                                      }
                                     </View>
 
                                     <TouchableOpacity onPress={() => {
                                       this.addtoCart(item)
-                                      alert('Added to Box Successfully')
+                                      alert('Added to Basket Successfully')
                                     }}>
-                                        <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11}}>Add to Box</Text>
+                                        {
+                                          item.get('Category') == 'Offer' || item.get('Type') == 'donation'? null :
+                                          <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11}}>Add to Basket</Text>
+                                        }
                                     </TouchableOpacity>
                                 </View>
                          </View>
@@ -279,8 +294,8 @@ export default class RequestFeed extends Component{
     Parse.serverURL = 'http://localhost:1337/parse';
     return(
       <View style={styles.container}>
-              <View style={{height: 90, marginLeft: 17, marginTop: 18, flexDirection: 'row', alignItems: 'center', width: phonewidth}}>
-                    <View>
+              <View style={{height: 105, flexDirection: 'row', alignItems: 'center', width: phonewidth, backgroundColor: 'white'}}>
+                    <View style={{marginTop: 20, marginLeft: 18}}>
                       <TouchableOpacity onPress={() => this.props.navigation.navigate('profile')}>
                           <Image 
                             source={require('./images/circle.png')}
@@ -304,7 +319,7 @@ export default class RequestFeed extends Component{
                       })}>
                           <Image
                             source={require('./images/basket.png')}
-                            style={{ width: 24, height: 24, marginLeft: 27}}
+                            style={{ width: 24, height: 24, marginLeft: 27, marginTop: 20}}
                           />
                       </TouchableOpacity>
                     </View> 
@@ -312,21 +327,21 @@ export default class RequestFeed extends Component{
                     <View>
                       <Image
                         source={require('./images/weShare.png')}
-                        style={{ width: 150, height: 29, marginLeft: 22}}
+                        style={{ width: 150, height: 29, marginLeft: 22, marginTop: 20}}
                       />
                     </View>
 
                     <View>
                       <Image
                         source={require('./images/notification.png')}
-                        style={{ width: 20, height: 20, marginLeft: 35}}
+                        style={{ width: 20, height: 20, marginLeft: 35, marginTop: 20}}
                       />
                     </View>
 
                     <View>
                       <Image
                         source={require('./images/search.png')}
-                        style={{ width: 20, height: 20, marginLeft: 35}}
+                        style={{ width: 20, height: 20, marginLeft: 35, marginTop: 20}}
                       />
                     </View>
               </View>

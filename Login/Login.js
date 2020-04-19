@@ -218,8 +218,8 @@ const styles = StyleSheet.create({
 
   confirmWord: {
     position: 'absolute',
-    left:     75,
-    top:      7,
+    left:     77,
+    top:      11,
     width: 200,
     height: 50,
     color: '#ffffff',

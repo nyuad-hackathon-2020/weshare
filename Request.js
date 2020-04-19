@@ -74,10 +74,12 @@ export default class Request extends Component{
                   
 
                     <View>
-                      <Image
-                        source={require('./images/search.png')}
-                        style={{ width: 20, height: 20, marginLeft: 85}}
-                      />
+                      <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
+                        <Image
+                            source={require('./images/delete.png')}
+                            style={{ width: 20, height: 20, marginLeft: 85}}
+                        />
+                      </TouchableOpacity>
                     </View>
                  </View>
 

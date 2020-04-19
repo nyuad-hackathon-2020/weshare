@@ -17,10 +17,10 @@ import ConfirmDonation from './ConfirmDonation'
 import ConfirmRequest from './ConfirmRequest'
 import retailerProfile from './retailerProfile'
 import ShoppingCart from './ShoppingCart'
-import profile3 from './profile33'
-import profile2 from './profile2'
+import Profile from './Profile'
 import Payment from './Payment'
 import ShowDonations from './ShowDonations'
+import Stats from './Stats'
 
 
 const Stack = createStackNavigator();
@@ -43,8 +43,9 @@ export default function App(){
               <Stack.Screen name="rfeed" component={RequestFeed} />
               <Stack.Screen name="cart" component={ShoppingCart} />
               <Stack.Screen name="payment" component={Payment} />
-              <Stack.Screen name="profile" component={profile2} />
+              <Stack.Screen name="profile" component={Profile} />
               <Stack.Screen name="showdonation" component={ShowDonations} />
+              <Stack.Screen name="stats" component={Stats} />
             </Stack.Navigator>
           </NavigationContainer>
     )
