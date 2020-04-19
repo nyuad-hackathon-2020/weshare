@@ -10,6 +10,7 @@ import {
   TextInput
 }from 'react-native'
 import AsyncStorage from '@react-native-community/async-storage';
+import { FloatingAction } from "react-native-floating-action"
 
 
 phonewidth = Dimensions.get('window').width
@@ -29,7 +30,20 @@ export default class RequestFeed extends Component{
 
   state={
       requestData: [],
-      myCart: []
+      myCart: [],
+      actions: [
+        {
+          text: "Request",
+          name: "request",
+          position: 2
+        },
+        {
+          text: "Donate",
+          name: "donate",
+          position: 1
+        }
+        
+      ]
   }
 
   addtoCart(item){
@@ -338,6 +352,14 @@ export default class RequestFeed extends Component{
                         style={{ width: 51, height: 51}}
                       />
                     </TouchableOpacity>
+                      {/* <FloatingAction
+                      animated = 'true'
+                      color="#7874D5"
+                        actions={this.state.actions}
+                        onPressItem={name => {
+                          console.log(name)
+                        }}
+                      /> */}
                   </View>
               
       </View>
