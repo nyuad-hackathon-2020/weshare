@@ -64,6 +64,10 @@ export default class Feed2 extends Component{
                                         <Text style={styles.txt}>Request</Text>
                                 </TouchableOpacity>
                             </View>
+                            <Image
+                                  source={require('./images/request.png')}
+                                  style={{ width: 20, height: 20, marginLeft: 174 , position: 'absolute', marginTop: 19, marginRight: 5}}
+                            />
 
                         </View>
 
