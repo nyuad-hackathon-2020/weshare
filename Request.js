@@ -54,43 +54,44 @@ export default class Request extends Component{
         Parse.serverURL = 'http://localhost:1337/parse';
         return(
             <View style={{flex: 1}}>
-                    <View style={{height: 50, marginLeft: 30, marginTop: 35, flexDirection: 'row', alignItems: 'center', width: phonewidth}}>
-                    <View>
-                      <Image 
-                        source={require('./images/circle.png')}
-                        style={{width: 40, height: 40}}
-                      />
-                      <Image
-                        source={require('./images/avatar2.png')}
-                        style={{ resizeMode: "cover",
-                        height: 45,
-                        width: 45,
-                        borderWidth: 0,
-                        borderRadius: 75,
-                        position: 'absolute', top: -4, left: -4}}
-                      />
+                   <View style={{height: 105, flexDirection: 'row', alignItems: 'center', width: phonewidth, backgroundColor: 'white'}}>
+                    <View style={{marginTop: 20, marginLeft: 18}}>
+                      <TouchableOpacity onPress={() => this.props.navigation.navigate('profile')}>
+                          <Image 
+                            source={require('./images/circle.png')}
+                            style={{width: 40, height: 40, marginLeft: 2}}
+                          />
+                          <Image
+                            source={require('./images/avatar2.png')}
+                            style={{ resizeMode: "cover",
+                            height: 45,
+                            width: 45,
+                            borderWidth: 0,
+                            borderRadius: 75,
+                            position: 'absolute', top: -4, marginLeft: 2}}
+                          />
+                      </TouchableOpacity>
                     </View> 
-
-                    
+                   
+                     
 
                     <View>
                       <Image
                         source={require('./images/weShare.png')}
-                        style={{ width: 150, height: 30, marginLeft: 71}}
+                        style={{ width: 150, height: 29, marginLeft: 70, marginTop: 20}}
                       />
                     </View>
 
-                  
-
+                   
                     <View>
-                      <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
+                     <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
                         <Image
                             source={require('./images/delete.png')}
-                            style={{ width: 20, height: 20, marginLeft: 85}}
+                            style={{ width: 20, height: 20, marginLeft: 100, marginTop: 20}}
                         />
-                      </TouchableOpacity>
+                     </TouchableOpacity>
                     </View>
-                 </View>
+              </View>
 
                  <View style={{flex: 1, alignItems: 'center'}}>
                         <Text style={styles.txt}>Request Form</Text>
@@ -115,7 +116,7 @@ export default class Request extends Component{
                             value={this.state.info}
                             style={styles.txt3} />
 
-                        <View style={{flex: 1, width: width, marginTop: 200, alignItems: 'center'}}>
+                        <View style={{flex: 1, width: width, marginTop: 180, alignItems: 'center'}}>
                                 <View style={{height: 50, backgroundColor: '#5887F9', alignItems: 'center', justifyContent: 'center', width: width}}>
                                         <TouchableOpacity onPress={() => {
                                           //  this.sendRequest()
@@ -146,10 +147,11 @@ const styles= StyleSheet.create({
     txt:{
         fontWeight: '500',
         color: '#5887F9',
-        fontSize: 20
+        fontSize: 20,
+        top: 5
     },
     txt2:{
-        marginTop: 48,
+        marginTop: 45,
         fontSize: 20,
         fontWeight: '500',
         color: '#5887F9'

@@ -79,7 +79,7 @@ export default class Feed2 extends Component{
                         <View style={styles.roundbtn}>
                                 <TouchableOpacity onPress={() => {
                                   // this.deleteData()
-                                  alert('Thank you for making payment')
+                                  alert('Thank you for Donating')
                                   this.props.navigation.replace('rfeed')
                                 }} style={{flexDirection: 'row'}}>
                                     <Image

@@ -64,7 +64,7 @@ export default class Feed2 extends Component{
               </View>
 
                 <View style={{ marginTop: 460,marginLeft: 90,}}>
-                        <View style={{flexDirection: 'row'}}>
+                        {/* <View style={{flexDirection: 'row'}}>
                             <View style={styles.roundbtn}>
                                 <TouchableOpacity onPress={() => this.props.navigation.navigate('request')}>
                                         <Text style={styles.txt}>Request</Text>
@@ -75,9 +75,18 @@ export default class Feed2 extends Component{
                                   style={{ width: 20, height: 20, marginLeft: 174 , position: 'absolute', marginTop: 19, marginRight: 5}}
                             />
 
-                        </View>
+                        </View> */}
 
                         <View>
+                          <TouchableOpacity onPress={() => this.props.navigation.navigate('request')}>
+                            <Image
+                              source={require('./images/request2.png')}
+                              style={{ width: 270, height: 50 }}
+                            />
+                          </TouchableOpacity>
+                        </View>
+
+                        {/* <View>
                             <View style={styles.roundbtn}>
                                 <TouchableOpacity onPress={() => this.props.navigation.navigate('donation')}>
                                         <Text style={styles.txt}>Donate</Text>
@@ -89,6 +98,15 @@ export default class Feed2 extends Component{
                                     source={require('./images/rect2.png')}
                                     style={{ width: 20, height: 20, marginLeft: 174 , position: 'absolute', marginTop: 19, marginRight: 5}}
                                 />
+                        </View> */}
+
+                        <View>
+                           <TouchableOpacity onPress={() => this.props.navigation.navigate('donation')}>
+                           <Image
+                            source={require('./images/donate2.png')}
+                            style={{ width: 270, height: 50, marginTop: 50}}
+                        />
+                           </TouchableOpacity>
                         </View>
                 </View>
 
@@ -96,7 +114,7 @@ export default class Feed2 extends Component{
                    <TouchableOpacity onPress={() =>this.props.navigation.goBack()}>
                         <Image
                             source={require('./images/back.png')}
-                            style={{ width: 25, height: 25, marginLeft: 25 }}
+                            style={{ width: 25, height: 25, marginLeft: 25, top: 25 }}
                         />
                    </TouchableOpacity>
                 </View>

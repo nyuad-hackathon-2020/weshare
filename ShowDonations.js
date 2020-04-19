@@ -210,7 +210,10 @@ class ShowDonations extends Component{
                                          </View>
     
                                       
-                                        <TouchableOpacity onPress={() => alert('Donation accepted')}>
+                                        <TouchableOpacity onPress={() => {
+                                          this.props.navigation.replace('rfeed')
+                                          alert('Donation accepted')
+                                        }}>
                                                  <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11}}>Accept Donations</Text>
                                         </TouchableOpacity>
                                        

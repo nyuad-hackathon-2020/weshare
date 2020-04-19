@@ -87,13 +87,13 @@ export default class Donation extends Component{
                         <Text style={styles.txt}>Donation Form</Text>
                         <Text style={styles.txt2}> What would you like to Donate?</Text>
                         <TextInput 
-                        placeholder='Type your request here'
+                        placeholder='What would you like to donate?'
                         onChangeText={txt => this.setState({req: txt})}
                         value={this.state.req}
                         style={styles.txt3}/>
                          <Text style={styles.cat}> Category Hashtag #</Text>
                          <TextInput 
-                        placeholder='Type your hashtag here'
+                        placeholder='Type your category here'
                         onChangeText={txt => this.setState({hashtag: txt})}
                         value={this.state.hashtag}
                         style={styles.txt3}/>
