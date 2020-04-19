@@ -11,48 +11,54 @@ export default class Feed2 extends Component{
     render(){
         return(
             <View style={{flex: 1}}>
-                     <View style={{height: 90, marginLeft: 17, marginTop: 18, flexDirection: 'row', alignItems: 'center', width: phonewidth}}>
-                    <View>
-                      <Image 
-                        source={require('./images/circle.png')}
-                        style={{width: 40, height: 40}}
-                      />
-                      <Image
-                        source={require('./images/avatar2.png')}
-                        style={{ resizeMode: "cover",
-                        height: 45,
-                        width: 45,
-                        borderWidth: 0,
-                        borderRadius: 75,
-                        position: 'absolute', top: -4, left: -4}}
-                      />
+                    <View style={{height: 105, flexDirection: 'row', alignItems: 'center', width: phonewidth, backgroundColor: 'white'}}>
+                    <View style={{marginTop: 20, marginLeft: 18}}>
+                      <TouchableOpacity onPress={() => this.props.navigation.navigate('profile')}>
+                          <Image 
+                            source={require('./images/circle.png')}
+                            style={{width: 40, height: 40, marginLeft: 2}}
+                          />
+                          <Image
+                            source={require('./images/avatar2.png')}
+                            style={{ resizeMode: "cover",
+                            height: 45,
+                            width: 45,
+                            borderWidth: 0,
+                            borderRadius: 75,
+                            position: 'absolute', top: -4, marginLeft: 2}}
+                          />
+                      </TouchableOpacity>
                     </View> 
-
+                   
                      <View>
-                      <Image
-                        source={require('./images/basket.png')}
-                        style={{ width: 26, height: 29, marginLeft: 27}}
-                      />
+                      <TouchableOpacity onPress={() => this.props.navigation.navigate('cart',{
+                        cart: this.state.myCart
+                      })}>
+                          <Image
+                            source={require('./images/basket.png')}
+                            style={{ width: 24, height: 24, marginLeft: 27, marginTop: 20}}
+                          />
+                      </TouchableOpacity>
                     </View> 
 
                     <View>
                       <Image
                         source={require('./images/weShare.png')}
-                        style={{ width: 150, height: 29, marginLeft: 22}}
+                        style={{ width: 150, height: 29, marginLeft: 22, marginTop: 20}}
                       />
                     </View>
 
                     <View>
                       <Image
                         source={require('./images/notification.png')}
-                        style={{ width: 20, height: 20, marginLeft: 35}}
+                        style={{ width: 20, height: 20, marginLeft: 35, marginTop: 20}}
                       />
                     </View>
 
                     <View>
                       <Image
                         source={require('./images/search.png')}
-                        style={{ width: 20, height: 20, marginLeft: 35}}
+                        style={{ width: 20, height: 20, marginLeft: 35, marginTop: 20}}
                       />
                     </View>
               </View>

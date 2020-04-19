@@ -9,7 +9,15 @@ import {
     Dimensions
 }from 'react-native'
 import AsyncStorage from '@react-native-community/async-storage';
+import DropdownMenu from 'react-native-dropdown-menu'
 
+// let data = [{
+//     value: 'Banana',
+//   }, {
+//     value: 'Mango',
+//   }, {
+//     value: 'Pear',
+//   }];
 
 const width = Dimensions.get('window').width
 
@@ -18,7 +26,8 @@ export default class Request extends Component{
     state={
         req: '',
         hashtag: '',
-        info: ''
+        info: '',
+        option: ''
     }
 
     // sendRequest = async() =>{
@@ -40,6 +49,7 @@ export default class Request extends Component{
     // }
 
     render(){
+        var data = [["C", "Java", "JavaScript", "PHP"]];
         Parse.setAsyncStorage(AsyncStorage);
         Parse.initialize("myAppId");
         Parse.serverURL = 'http://localhost:1337/parse';
@@ -93,11 +103,12 @@ export default class Request extends Component{
                         style={styles.txt3}/>
                          <Text style={styles.cat}> Category Hashtag #</Text>
                          <TextInput 
-                        placeholder='Type your hashtag here'
+                        placeholder='Type your category here'
                         onChangeText={txt => this.setState({hashtag: txt})}
                         value={this.state.hashtag}
                         style={styles.txt3}/>
-
+                        
+                        
                         <Text style={styles.cat}> Additional Information</Text>
                         <TextInput
                             placeholder='Additional Information'

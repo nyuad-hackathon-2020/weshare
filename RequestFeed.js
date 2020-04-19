@@ -73,9 +73,9 @@ export default class RequestFeed extends Component{
         })
     });
 
-    subscription.on('delete', (object) => {
-      this.fetchAllRequests()
-  });
+  //   subscription.on('delete', (object) => {
+  //     this.fetchAllRequests()
+  // });
   }
 
   showImage(name){
