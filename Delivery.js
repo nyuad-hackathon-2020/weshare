@@ -37,7 +37,8 @@ export default class Feed2 extends Component{
                     style={{
                       width: 15,
                       height: 15,
-                      marginTop: screenHeight * 0.04,
+                      marginTop: 60,
+                      marginLeft: 18,
                       tintColor: "purple"
                     }}
                   />
@@ -60,7 +61,7 @@ export default class Feed2 extends Component{
             />
             <View>
               <Image
-                  source={require('./images/Fetchr.png')}
+                  source={require('./images/fetchr.png')}
                   style={{ width: 225, height: 50,marginBottom: 40}}
               />
               <Image
@@ -74,10 +75,10 @@ export default class Feed2 extends Component{
             </View>
             
           </View>
-            <View style={{marginLeft: 40, position: 'absolute', bottom: 0}}>
+            <View style={{marginLeft: 40, position: 'absolute', bottom: 40, left: 40}}>
                         <View style={styles.roundbtn}>
                                 <TouchableOpacity onPress={() => {
-                                  this.deleteData()
+                                  // this.deleteData()
                                   alert('Thank you for making payment')
                                   this.props.navigation.replace('rfeed')
                                 }} style={{flexDirection: 'row'}}>
@@ -112,7 +113,8 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     fontSize: 14,
     lineHeight: 70,
-    color: "#7329A4"
+    color: "#7329A4",
+    marginTop: 30
   },
   roundbtn:{
     width: 250,
@@ -130,5 +132,6 @@ confirm:{
   marginTop: 4,
   color: '#FFFFFF',
   backgroundColor: "#7874D5",
+  marginLeft: 8
 },
 });

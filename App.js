@@ -21,6 +21,7 @@ import Profile from './Profile'
 import Payment from './Payment'
 import ShowDonations from './ShowDonations'
 import Stats from './Stats'
+import Delivery from './Delivery'
 
 
 const Stack = createStackNavigator();
@@ -46,6 +47,7 @@ export default function App(){
               <Stack.Screen name="profile" component={Profile} />
               <Stack.Screen name="showdonation" component={ShowDonations} />
               <Stack.Screen name="stats" component={Stats} />
+              <Stack.Screen name="delivery" component={Delivery} />
             </Stack.Navigator>
           </NavigationContainer>
     )

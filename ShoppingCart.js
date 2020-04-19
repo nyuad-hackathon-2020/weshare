@@ -121,7 +121,7 @@ class ShoppingCart extends Component{
             // <Text>{item.get('Message')}</Text>
             return(
                
-                <View style={{flex: 1, marginTop: 5}} key={index}>
+                <View style={{flex: 1, marginTop: 5, marginHorizontal: 19}} key={index}>
                        <View style={{height: 20, width: phonewidth, marginBottom: 30,  height: 200}}>
                              <View style={{flexDirection: 'row', alignItems: 'center'}}>
                                     <View>
@@ -158,7 +158,7 @@ class ShoppingCart extends Component{
                                       {this.showImage(item.get('Category'))}
                                     </View>
     
-                                    <View>
+                                    <View style={{marginRight: 160}}>
                                         <Text style={{marginLeft: 17, fontSize: 14, fontWeight: '500', color: '#562DC4'}}>{item.get('Message')}</Text>
                                         <Text style={{marginLeft: 17, fontSize: 12, fontWeight: '500', color: 'gray', marginTop: 10, height: 50}}>{item.get('Information')}</Text>
                                     </View>
@@ -205,13 +205,13 @@ class ShoppingCart extends Component{
     }
     render(){
         return(
-            <View style={{flex: 1, marginHorizontal: 19}}>
-                     <View style={{height: 50, marginTop: 35, flexDirection: 'row', alignItems: 'center', width: phonewidth}}>
+            <View style={{flex: 1}}>
+                     <View style={{height: 105, flexDirection: 'row', alignItems: 'center', width: phonewidth, backgroundColor: 'white'}}>
                     <View>
-                      <Image 
+                      {/* <Image 
                         source={require('./images/circle.png')}
-                        style={{width: 40, height: 40}}
-                      />
+                        style={{width: 40, height: 40, marginLeft: 19, marginTop: 19}}
+                      /> */}
                       <Image
                         source={require('./images/avatar2.png')}
                         style={{ resizeMode: "cover",
@@ -219,7 +219,7 @@ class ShoppingCart extends Component{
                         width: 45,
                         borderWidth: 0,
                         borderRadius: 75,
-                        position: 'absolute', top: -4, left: -4}}
+                        position: 'absolute', left: 19}}
                       />
                     </View> 
 
@@ -227,8 +227,8 @@ class ShoppingCart extends Component{
 
                     <View>
                       <Image
-                        source={require('./images/weShare.png')}
-                        style={{ width: 150, height: 30, marginLeft: 71}}
+                        source={require('./images/mycart.png')}
+                        style={{ width: 150, height: 30, marginLeft: 140, top: 20}}
                       />
                     </View>
 
@@ -237,7 +237,7 @@ class ShoppingCart extends Component{
                     <View>
                       <Image
                         source={require('./images/notification.png')}
-                        style={{ width: 20, height: 20, marginLeft: 85}}
+                        style={{ width: 20, height: 20, marginLeft: 85, top: 20}}
                       />
                     </View>
                  </View>
@@ -250,7 +250,7 @@ class ShoppingCart extends Component{
                             </ScrollView>
                         </View>
 
-                        <View style={{flex: 0.1,}}>
+                        <View style={{flex: 0.1,marginLeft: 19}}>
                             <View style={{ flexDirection: 'row' , alignItems: 'center'}}>
                                 <View>
                                    <TouchableOpacity onPress={() => this.props.navigation.goBack('rfeed')}>
@@ -269,7 +269,7 @@ class ShoppingCart extends Component{
                                                         source={require('./images/success.png')}
                                                         style={{ width: 22, height: 22 }}
                                                       />
-                                                     <TouchableOpacity onPress={() => this.props.navigation.navigate('payment',{
+                                                     <TouchableOpacity onPress={() => this.props.navigation.navigate('delivery',{
 
                                                        arr: this.props.route.params.cart
                                                      })}>
