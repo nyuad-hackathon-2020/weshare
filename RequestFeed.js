@@ -258,9 +258,9 @@ export default class RequestFeed extends Component{
 
                                     <TouchableOpacity onPress={() => {
                                       this.addtoCart(item)
-                                      alert('Added to Box Successfully')
+                                      alert('Added to Basket Successfully')
                                     }}>
-                                        <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11}}>Add to Box</Text>
+                                        <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11}}>Add to Basket</Text>
                                     </TouchableOpacity>
                                 </View>
                          </View>

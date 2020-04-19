@@ -16,12 +16,12 @@ const screenHeight = Math.round(Dimensions.get("window").height);
 console.log(screenWidth);
 console.log(screenHeight);
 
-export default class Profile extends Component {
+export default class Stats extends Component {
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
             <Image
               source={require("./images/back.png")}
               style={{
@@ -60,15 +60,15 @@ export default class Profile extends Component {
             }}
           />
         <View style={styles.body}>
-            <Text style={{position:'absolute', top: 40, left: 100}}>Donations per country</Text>
-            <View style={{position: 'absolute', top: 126, left: 200}}>
+            <Text style={{position:'absolute', top: 40, left: 130}}>Donations per country</Text>
+            <View style={{position: 'absolute', top: 126, left: 200, alignItems: 'center', justifyContent: 'center'}}>
             <TouchableOpacity style={styles.statsbutton}>
               <Image
                 source={require("./images/africaAsia.png")}
                 style={{
                   width: 250,
                   height: 195,
-                  marginLeft: screenWidth * -0.4,
+                  marginLeft: -130,
                   marginTop: screenHeight * -0.07,
                   resizeMode:'contain',
                 }}
@@ -83,7 +83,7 @@ export default class Profile extends Component {
     borderStyle: 'solid',
     borderWidth: 1,
     backgroundColor: 'rgba(170, 115, 254, 0.62)'}} />
-              <View style={{position: 'absolute', top: 127, left: 222,
+              <View style={{position: 'absolute', top: 115, left: 253,
             width: 10,
     height: 10,
     borderRadius: 100/2,
@@ -109,7 +109,7 @@ export default class Profile extends Component {
               position: 'absolute', top: 370, left: 0,
             }}
           />
-        <View style={{position: 'absolute', top: 126, left: 200}}>
+        <View style={{position: 'absolute', top: 76, left: 250}}>
               <Image
                 source={require("./images/week_graph.png")}
                 style={{
@@ -119,22 +119,26 @@ export default class Profile extends Component {
                   marginTop: screenHeight * 0.35,
                 }}
               />
+
+              
           <Text
             style={{
               position:'absolute',
-              left: -203,
+              left: -243,
               top: 320,
               width: 80,
-              color: "#7329A4",
+              fontWeight: '500',
+              fontSize: 22,
+              color: "Black",
               textAlign: "center",
             //  fontFamily: "Circular Std",
               fontStyle: "normal",
               fontWeight: "500",
               fontSize: 10,
-              transform: [{ rotate: '-90deg'}]
+             
             }}
           >
-            Donations
+            Weekly
           </Text>         
         <Text
             style={{
@@ -225,7 +229,7 @@ export default class Profile extends Component {
               position: 'absolute', top: 570, left: 0,
             }}
           />
-        <View style={{position: 'absolute', top: 126, left: 200}}>
+        <View style={{position: 'absolute', top: 76, left: 250}}>
               <Image
                 source={require("./images/category_graph2.png")}
                 style={{
@@ -235,11 +239,13 @@ export default class Profile extends Component {
                   marginTop: screenHeight * 0.62,
                 }}
               />
-          <Text
+
+              <Text style={{position: 'absolute', marginTop: 520, marginLeft: -230, fontWeight: '500', fontSize: 10}}>Sector Wise</Text>
+          {/* <Text
             style={{
               position:'absolute',
               left: -203,
-              top: 520,
+              top: 560,
               width: 80,
               color: "#7329A4",
               textAlign: "center",
@@ -251,7 +257,7 @@ export default class Profile extends Component {
             }}
           >
             Donations
-          </Text>         
+          </Text>          */}
         <Text
             style={{
               position:'absolute',
@@ -325,7 +331,7 @@ export default class Profile extends Component {
 const styles = StyleSheet.create({
   header: {
     backgroundColor: "#FFFFFF",
-    height: screenHeight * 0.1,
+    height: 100,
     flexDirection: "row",
     justifyContent: "space-around",
     width: screenWidth * 1.3,

@@ -32,7 +32,7 @@ export default class Profile extends Component {
             />
           </TouchableOpacity>
 
-          <View style={{marginTop: 25}}>
+          <View style={{marginTop: 30}}>
             <TouchableOpacity>
               <Text style={styles.capitalLetter}>PROFILE</Text>
             </TouchableOpacity>
@@ -44,7 +44,7 @@ export default class Profile extends Component {
               style={{
                 width: 3,
                 height: 15,
-                marginTop: screenHeight * 0.056,
+                marginTop: 55,
                 tintColor: "purple"
               }}
             />
@@ -58,12 +58,17 @@ export default class Profile extends Component {
           />
         </View>
         <View style={styles.body}>
-          <View style={styles.bodyContent}>
+          <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 10}}>
+                  <Text style={{fontWeight: '700'}}>John Doe</Text>
+                  <Text>San Francisco, CA</Text>
+                  <Text>Hi!! My name is John</Text>
+          </View>
+          {/* <View style={styles.bodyContent}>
             <Text style={styles.name}>John Doe</Text>
             <Text style={styles.info}>San Francisco, CA</Text>
             <Text style={styles.description}>Hi! My name is John!</Text>
-          </View>
-            <View style={{position: 'absolute', top: 120, left: 100}}>
+          </View> */}
+            <View style={{position: 'absolute', top: 75, left: 100}}>
             <TouchableOpacity style={styles.donbutton}>
               <Text
                 style={{
@@ -74,7 +79,7 @@ export default class Profile extends Component {
                   fontWeight: "500",
                   fontSize: 38.8,
                   marginLeft: screenWidth * 0,
-                  marginTop: screenHeight * -0.05
+                  marginTop: 1
                 }}
               >
                 20
@@ -94,8 +99,8 @@ export default class Profile extends Component {
               </Text>
             </TouchableOpacity>
             </View>
-            <View style={{position: 'absolute', top: 126, left: 200}}>
-            <TouchableOpacity style={styles.statsbutton}>
+            <View style={{position: 'absolute', top: 122, left: 200}}>
+            <TouchableOpacity style={styles.statsbutton} onPress={() => this.props.navigation.navigate('stats')}>
               <Image
                 source={require("./images/stats.png")}
                 style={{
@@ -129,7 +134,7 @@ export default class Profile extends Component {
                 left: 20
               }}
           >
-            <View style={{ marginTop: screenHeight * 0.01 }}>
+            <View>
               <TouchableOpacity style={styles.commentContainer}>
                 <View style={{ flexDirection: "row" }}>
                   <View style={styles.profileImageContainer2}>
@@ -142,7 +147,7 @@ export default class Profile extends Component {
                   <Text
                     style={{
                       marginLeft: screenWidth * 0.05,
-                      marginTop: screenHeight * 0.03
+                      marginTop: 10
                     }}
                   >
                     Elif Su Ozoglu
@@ -150,14 +155,14 @@ export default class Profile extends Component {
                   <Text
                     style={{
                       marginLeft: screenWidth * 0.45,
-                      marginTop: screenHeight * 0.03
+                      marginTop: 10
                     }}
                   >
                     2h
                   </Text>
                 </View>
                 <Text
-                  style={{ marginLeft: screenWidth * 0.2, color: "#7329A4" }}
+                  style={{ marginLeft: 70, color: "#7329A4" }}
                 >
                   {""}
                   Thank you so much for your help! This month has been saved,
@@ -176,7 +181,7 @@ export default class Profile extends Component {
                   <Text
                     style={{
                       marginLeft: screenWidth * 0.05,
-                      marginTop: screenHeight * 0.03
+                      marginTop: 10
                     }}
                   >
                     Nicolas Zilberstein
@@ -184,14 +189,14 @@ export default class Profile extends Component {
                   <Text
                     style={{
                       marginLeft: screenWidth * 0.37,
-                      marginTop: screenHeight * 0.03
+                      marginTop: 10
                     }}
                   >
                     2h
                   </Text>
                 </View>
                 <Text
-                  style={{ marginLeft: screenWidth * 0.2, color: "#7329A4" }}
+                  style={{ marginLeft: 70, color: "#7329A4" }}
                 >
                   {""}
                   Thank you so much for your help! This month has been saved,
@@ -210,7 +215,7 @@ export default class Profile extends Component {
                   <Text
                     style={{
                       marginLeft: screenWidth * 0.05,
-                      marginTop: screenHeight * 0.03
+                      marginTop: 10
                     }}
                   >
                     Baran Iscanli
@@ -218,14 +223,14 @@ export default class Profile extends Component {
                   <Text
                     style={{
                       marginLeft: screenWidth * 0.46,
-                      marginTop: screenHeight * 0.03
+                      marginTop: 10
                     }}
                   >
                     2h
                   </Text>
                 </View>
                 <Text
-                  style={{ marginLeft: screenWidth * 0.2, color: "#7329A4" }}
+                  style={{ marginLeft: 70, color: "#7329A4" }}
                 >
                   {""}
                   Thank you so much for your help! This month has been saved,
@@ -244,7 +249,7 @@ export default class Profile extends Component {
                   <Text
                     style={{
                       marginLeft: screenWidth * 0.05,
-                      marginTop: screenHeight * 0.03
+                      marginTop: 10
                     }}
                   >
                    Juan Dolvan 
@@ -252,14 +257,14 @@ export default class Profile extends Component {
                   <Text
                     style={{
                       marginLeft: screenWidth * 0.47,
-                      marginTop: screenHeight * 0.03
+                      marginTop: 10
                     }}
                   >
                     2h
                   </Text>
                 </View>
                 <Text
-                  style={{ marginLeft: screenWidth * 0.2, color: "#7329A4" }}
+                  style={{ marginLeft:70, color: "#7329A4" }}
                 >
                   {""}
                   Thank you so much for your help! This month has been saved,
@@ -356,7 +361,9 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     borderWidth: 0,
-    borderRadius: 75,
-    overlayColor: "#FFFFFF"
+    borderRadius: 25,
+    overlayColor: "#FFFFFF",
+    
+    
   }
 });
