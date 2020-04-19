@@ -40,6 +40,7 @@ export default class RequestFeed extends Component{
   }
 
   async componentDidMount(){
+    console.log('this is called')
     this.fetchAllRequests()
 
     let query = new Parse.Query('Request');
@@ -52,7 +53,6 @@ export default class RequestFeed extends Component{
      subscription.on('create', (object) => {
         var arr = this.state.requestData
         // arr.push(object)
-
 
         this.setState({
             requestData: [object, ...this.state.requestData]
@@ -166,7 +166,7 @@ export default class RequestFeed extends Component{
 
    showData =() =>{
     return this.state.requestData.map((item, index) =>{
-        // <Text>{item.get('Message')}</Text>
+       
         return(
            
             <View style={{flex: 1, marginTop: 5}} key={index}>
@@ -229,7 +229,7 @@ export default class RequestFeed extends Component{
                                       />
                                     </View>
 
-                                   {item.get('Category') == 'Offer' ?
+                                   {item.get('Category') == 'Offer' || item.get('Type') == 'donation' ?
                                     <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11}}>Accept Donations</Text>:
                                     <Text style={{fontSize: 14, color: '#8E8E8E', marginLeft: 11}}>Support Cause</Text>}
                                 </View>
@@ -267,19 +267,21 @@ export default class RequestFeed extends Component{
       <View style={styles.container}>
               <View style={{height: 90, marginLeft: 17, marginTop: 18, flexDirection: 'row', alignItems: 'center', width: phonewidth}}>
                     <View>
-                      <Image 
-                        source={require('./images/circle.png')}
-                        style={{width: 40, height: 40}}
-                      />
-                      <Image
-                        source={require('./images/avatar2.png')}
-                        style={{ resizeMode: "cover",
-                        height: 45,
-                        width: 45,
-                        borderWidth: 0,
-                        borderRadius: 75,
-                        position: 'absolute', top: -4, left: -4}}
-                      />
+                      <TouchableOpacity onPress={() => this.props.navigation.navigate('profile')}>
+                          <Image 
+                            source={require('./images/circle.png')}
+                            style={{width: 40, height: 40, marginLeft: 2}}
+                          />
+                          <Image
+                            source={require('./images/avatar2.png')}
+                            style={{ resizeMode: "cover",
+                            height: 45,
+                            width: 45,
+                            borderWidth: 0,
+                            borderRadius: 75,
+                            position: 'absolute', top: -4, marginLeft: 2}}
+                          />
+                      </TouchableOpacity>
                     </View> 
                    
                      <View>
@@ -345,7 +347,8 @@ export default class RequestFeed extends Component{
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    //backgroundColor: '#D8D8D8'
   },
   fontheader:{
     fontSize: 17,

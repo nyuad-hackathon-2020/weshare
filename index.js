@@ -13,5 +13,6 @@ global.Parse = require('parse/react-native')
 global.Parse.setAsyncStorage(AsyncStorage)
 global.Parse.initialize('myAppId')
 global.Parse.serverUrl = 'http://localhost:1337/parse'
+console.disableYellowBox = true
 
 AppRegistry.registerComponent(appName, () => App);

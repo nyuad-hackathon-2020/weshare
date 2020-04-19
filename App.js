@@ -20,6 +20,7 @@ import ShoppingCart from './ShoppingCart'
 import profile3 from './profile3'
 import profile2 from './profile2'
 import Payment from './Payment'
+import ShowDonations from './ShowDonations'
 
 
 const Stack = createStackNavigator();
@@ -30,9 +31,6 @@ export default function App(){
             <Stack.Navigator headerMode={null}>
               {/* <Stack.Screen name="Login" component={Login} />
               // <Stack.Screen name="SignIn" component={SignIn} /> */}
-
-              {/* <Stack.Screen name="profile" component={profile2} /> */}
-
 
               <Stack.Screen name="signin" component={SignIn} />
               <Stack.Screen name="login" component={Login} />
@@ -45,6 +43,8 @@ export default function App(){
               <Stack.Screen name="rfeed" component={RequestFeed} />
               <Stack.Screen name="cart" component={ShoppingCart} />
               <Stack.Screen name="payment" component={Payment} />
+              <Stack.Screen name="profile" component={profile2} />
+              <Stack.Screen name="showdonation" component={ShowDonations} />
             </Stack.Navigator>
           </NavigationContainer>
     )

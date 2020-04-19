@@ -253,7 +253,7 @@ class ShoppingCart extends Component{
                         <View style={{flex: 0.1,}}>
                             <View style={{ flexDirection: 'row' , alignItems: 'center'}}>
                                 <View>
-                                   <TouchableOpacity onPress={() => this.props.navigation.replace('rfeed')}>
+                                   <TouchableOpacity onPress={() => this.props.navigation.goBack('rfeed')}>
                                         <Image
                                             source={require('./images/back.png')}
                                             style={{ width: 20, height: 20, marginTop: 10 }}

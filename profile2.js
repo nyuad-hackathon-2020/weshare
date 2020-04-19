@@ -20,7 +20,7 @@ export default class Profile extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
             <Image
               source={require("./images/back.png")}
               style={{

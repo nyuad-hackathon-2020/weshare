@@ -21,22 +21,23 @@ export default class Request extends Component{
         info: ''
     }
 
-    sendRequest = async() =>{
-        params={
-            name: 'Lucy',
-            message: this.state.req,
-            category: this.state.hashtag,
-            username: 'Lucifer',
-            price: 20,
-            info: this.state.info
-        }
+    // sendRequest = async() =>{
+    //     params={
+    //         name: 'Lucy',
+    //         message: this.state.req,
+    //         category: this.state.hashtag,
+    //         username: 'Lucifer',
+    //         price: 20,
+    //         info: this.state.info,
+    //         type: 'Request'
+    //     }
 
-        const resp = await Parse.Cloud.run('AddRequest', params)
+    //     const resp = await Parse.Cloud.run('AddRequest', params)
 
-        if(resp){
-            alert('Request added successfully!!!')
-        }
-    }
+    //     if(resp){
+    //         alert('Request added successfully!!!')
+    //     }
+    // }
 
     render(){
         Parse.setAsyncStorage(AsyncStorage);
@@ -105,15 +106,19 @@ export default class Request extends Component{
                         <View style={{flex: 1, width: width, marginTop: 200, alignItems: 'center'}}>
                                 <View style={{height: 50, backgroundColor: '#5887F9', alignItems: 'center', justifyContent: 'center', width: width}}>
                                         <TouchableOpacity onPress={() => {
-                                            this.sendRequest()
+                                          //  this.sendRequest()
                                             this.setState({
                                                 req: '',
                                                 hashtag: '',
                                                 info: ''
                                             })
-                                            this.props.navigation.replace('rfeed')
+                                            this.props.navigation.navigate('showdonation',{
+                                                req: this.state.req,
+                                                hashtag: this.state.hashtag,
+                                                info: this.state.info
+                                            })
                                         }}>
-                                            <Text style={styles.confirm2}>Confirm</Text>
+                                            <Text style={styles.confirm2}>Next</Text>
                                         </TouchableOpacity>
                                 </View>
                                 <Text style={styles.safe}>You are completely safe</Text>

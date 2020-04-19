@@ -23,16 +23,19 @@ export default class Donation extends Component{
 
     sendRequest = async() =>{
         params={
-            name: 'Harshit',
+            name: 'Neel',
             message: this.state.req,
             category: this.state.hashtag,
-            price: 40
+            username: 'iNeel18',
+            price: 20,
+            info: this.state.info,
+            type: 'donation'
         }
 
         const resp = await Parse.Cloud.run('AddRequest', params)
 
         if(resp){
-            alert('Request added successfully!!!')
+            alert('Thank you for donation')
         }
     }
 
@@ -104,7 +107,7 @@ export default class Donation extends Component{
                                                 hashtag: '',
                                                 info: ''
                                             })
-                                            this.props.navigation.replace('requestfeed')
+                                            this.props.navigation.replace('rfeed')
                                         }}>
                                             <Text style={styles.confirm2}>Confirm</Text>
                                         </TouchableOpacity>
