@@ -17,7 +17,7 @@
     "parse": "^2.12.0",
     "parse-dashboard": "^2.0.5",
     "parse-react": "^0.5.2",
-    "parse-server": "^4.2.0",
+    "parse-server": "^5.4.1",
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-dropdown-menu": "^2.0.0",
